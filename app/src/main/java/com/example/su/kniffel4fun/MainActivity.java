@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*test MF*/
         checkDice dice = new checkDice();
-        int result = dice.checkOne();
+        int result = dice.checkNumber(1);
         Log.d("SENSO", "Ergebnis ist "+result);
         int fullhouse = dice.checkFullhouse();
         Log.d("SENSO", "Fullhouse ist "+fullhouse);
