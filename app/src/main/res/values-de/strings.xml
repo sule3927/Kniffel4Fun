@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kniffel4Fun</string>
+    <string name="strBtnFinish">Beenden</string>
+    <string name="strBtnStart">Los gehts ...</string>
+    <string name="strTxtHeader">WILLKOMMEN</string>
+</resources>

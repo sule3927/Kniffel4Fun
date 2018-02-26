@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Yatzi4Fun</string>
+    <string name="strBtnFinish">Exit</string>
+    <string name="strBtnStart">Lets go ...</string>
+    <string name="strTxtHeader">WELCOME</string>
+</resources>
