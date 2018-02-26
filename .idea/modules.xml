@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Kniffel4Fun.iml" filepath="$PROJECT_DIR$/Kniffel4Fun.iml" />
+      <module fileurl="file://C:\Users\Merle\AndroidStudioProjects\Kniffel_richtig\Kniffel4Fun.iml" filepath="C:\Users\Merle\AndroidStudioProjects\Kniffel_richtig\Kniffel4Fun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kniffel_richtig.iml" filepath="$PROJECT_DIR$/Kniffel_richtig.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
