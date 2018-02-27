@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class checkDice {
 
     /*testweise Befüllung des Arrays*/
-    int[] dice = {1,2,3,2,2};
+    int[] dice = {2,2,2,2,2};
 
     /*
     * public method checkNumber
@@ -43,6 +43,66 @@ public class checkDice {
         }
     }
 
+
+    /*
+    * public method check3OfAKind, checks if the dices fullfill the requirements of 3 of a kind
+    * @author: Judith Balss
+    * @return: points for 3 of a kind  / 0 if not 3 of a kind or more*/
+    public int check3OfAKind () {
+        Arrays.sort(dice);
+        if ((dice[0] == dice[1]) && (dice[0] == dice [2]) || (dice[1] == dice[2]) && (dice[1] == dice [3]) || (dice[2] == dice[3]) && (dice[2] == dice [4])){
+            int sum = 0;
+            for (int i : dice) {
+                sum += i;
+            }
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    /*
+    * public method check4OfAKind, checks if the dices fullfill the requirements of 4 of a kind
+    * @author: Judith Balss
+    * @return: points for 4 of a kind  / 0 if not 4 of a kind or more*/
+    public int check4OfAKind () {
+        Arrays.sort(dice);
+        if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) || (dice[1] == dice[2]) && (dice[1] == dice [3]) && (dice[1] == dice[4])){
+            int sum = 0;
+            for (int i : dice) {
+                sum += i;
+            }
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    /*
+    * public method checkYatzy, checks if the dices fullfill the requirements of a yatzy
+    * @author: Judith Balss
+    * @return: points for yatzy  / 0 if not a yatzy */
+    public int checkYatzy () {
+        Arrays.sort(dice);
+        if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) && (dice[0] == dice[4])){
+            return 50;
+        } else {
+            return 0;
+        }
+    }
+
+    /*
+    * public method check4OfAKind, checks if the dices fullfill the requirements of 4 of a kind
+    * @author: Judith Balss
+    * @return: points for 4 of a kind  / 0 if not 4 of a kind or more*/
+    public int checkChance () {
+        int sum = 0;
+        for (int i : dice) {
+            sum += i;
+        }
+        return sum;
+
+    }
 
 
 }
