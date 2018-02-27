@@ -14,10 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
         /*test MF*/
         checkDice dice = new checkDice();
-        int result = dice.checkNumber(1);
+        int result = dice.checkNumber(2);
         Log.d("SENSO", "Ergebnis ist "+result);
         int fullhouse = dice.checkFullhouse();
         Log.d("SENSO", "Fullhouse ist "+fullhouse);
+        int largeStraight = dice.checkLargeStraight();
+        Log.d("SENSO", "große Straße bringt "+largeStraight+" Punkte!");
+        int smallStraight = dice.checkSmallStraight();
+        Log.d("SENSO", "kleine Straße bringt "+smallStraight+" Punkte!");
     }
 
 }
