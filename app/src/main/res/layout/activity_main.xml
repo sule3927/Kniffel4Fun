@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:accessibilityLiveRegion="none"
+    android:background="@color/colorMiddleYellow"
     tools:context="com.example.su.kniffel4fun.MainActivity">
 
     <TextView
@@ -14,29 +16,64 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/strTxtHeader"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnFinish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/strBtnFinish"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorMiddleYellow"
         android:text="@string/strBtnStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkRed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibtnFinish"
+        android:layout_marginRight="8dp" />
+
+    //TODO Hintergrundfarbe Image-Button ändern
+
+    <ImageButton
+        android:id="@+id/ibtnFinish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorMiddleYellow"
+        android:contentDescription="@string/strBtnFinish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/left_arrowhdpi72pix" />
+
+    <Spinner
+        android:id="@+id/spiAvatar"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvAstronaut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/astronautmdpi48pix"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="189dp" />
 
 
 </android.support.constraint.ConstraintLayout>
