@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
+import com.PlayGame;
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
         int chance = dice.checkChance();
         Log.d("SENSO", "Chance ist "+chance);
+
+        PlayGame game = new PlayGame();
+        int points = game.calculateResult();
+        Log.d("SENSO", "Anzahl der Punkte "+points);
+
+
     }
 
 }
