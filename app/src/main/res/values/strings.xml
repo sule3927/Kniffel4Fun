@@ -3,4 +3,5 @@
     <string name="strBtnFinish">Exit</string>
     <string name="strBtnStart">Lets go ...</string>
     <string name="strTxtHeader">WELCOME</string>
+    <string name="strSpiAvatar">Choose an Avatar</string>
 </resources>

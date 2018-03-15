@@ -4,4 +4,5 @@
     <string name="strBtnFinish">Beenden</string>
     <string name="strBtnStart">Los gehts ...</string>
     <string name="strTxtHeader">WILLKOMMEN</string>
+    <string name="strSpiAvatar">Wähle einen Avatar</string>
 </resources>
