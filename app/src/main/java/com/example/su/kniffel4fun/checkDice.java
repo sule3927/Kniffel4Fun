@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class checkDice {
 
     /*testweise Befüllung des Arrays*/
-    int[] dice = {2,2,2,2,2};
+    int[] dice = {5,2,3,4,2};
 
     /*
     * public method checkNumber
@@ -106,17 +106,25 @@ public class checkDice {
 
     }
 
-    /*TODO mittlere, doppelte Elemente zulassen, z.b. 1,2,3,3,4 ist eine gültige kleine Straße
+    /*
     * public method checkSmallStraight (kleine Straße), checks if the dices fullfill the requirements of a smallStraight
     * @author: Merle Friedrichsen
-    * @return: points for smallStraight / 0 if no no smallStraight*/
+    * @return: points for smallStraight / 0 if no smallStraight*/
     public int checkSmallStraight () {
         Arrays.sort(dice);
-        if ((dice[0]+1 == dice [1]) && (dice[1]+1 == dice [2]) && (dice[2]+1 == dice [3])){
+        int longestRow = 1;
+        int i;
+        for (i = 0; i < 4; i++) {
+            int distance = dice[i+1] - dice[i];
+            if (distance == 1) {
+                longestRow++;
+            } else if (distance >=1) {
+                longestRow = 1;
+            }
+        }
+        if (longestRow >= 4) {
             return 30;
-        } else if ((dice[1]+1 == dice [2]) && (dice[2]+1 == dice [3]) && (dice[3]+1 == dice [4])) {
-            return 30;
-        }    else {
+        } else {
             return 0;
         }
     }
@@ -130,8 +138,6 @@ public class checkDice {
         boolean largeStraight = true;
         int i = 0;
         while ((largeStraight == true) && (i <= 3)){
-            int a = dice[i]+1;
-            int b = dice [i+1];
             if (dice[i]+1 != dice [i+1]){
                 largeStraight = false;
             }
