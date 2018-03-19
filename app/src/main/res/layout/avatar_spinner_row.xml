@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_v_avatar"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/astronaut"
+        android:layout_marginTop="53dp"
+        app:layout_constraintStart_toStartOf="@+id/spiAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/spiAvatar"
+        app:layout_constraintLeft_toLeftOf="@+id/spiAvatar"/>
+
+
+</android.support.constraint.ConstraintLayout>
