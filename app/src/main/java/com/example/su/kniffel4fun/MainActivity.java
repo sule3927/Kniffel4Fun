@@ -1,21 +1,71 @@
 package com.example.su.kniffel4fun;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-import com.PlayGame;
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
 
-public class MainActivity extends AppCompatActivity {
+    private ArrayList<AvatarItem> mAvatarList;
+    private AvatarAdapter mAdapter;
 
-    @Override
+    private Button startBtn;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*test MF*/
+        startBtn = (Button) findViewById(R.id.btnStart);
+        startBtn.setOnClickListener(this);
+
+        initList();
+
+        Spinner spinnerAvatar = findViewById(R.id.spiAvatar);
+
+        mAdapter = new AvatarAdapter(this, mAvatarList);
+        spinnerAvatar.setAdapter(mAdapter);
+
+        spinnerAvatar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                AvatarItem clickedItem = (AvatarItem) parent.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+
+        });
+    }
+    private void initList(){
+        mAvatarList = new ArrayList<>();
+        mAvatarList.add(new AvatarItem(R.drawable.astronaut));
+        mAvatarList.add(new AvatarItem(R.drawable.thief));
+        mAvatarList.add(new AvatarItem(R.drawable.mario));
+    }
+
+    @Override
+    public void onClick(View view) {
+        int clickedElement = view.getId();
+
+        if (clickedElement == R.id.btnStart){
+            Intent intent = new Intent(MainActivity.this, KniffelGame.class);
+            startActivity(intent);
+
+        }
+    }
+
+/*        /*test MF
         checkDice dice = new checkDice();
         int result = dice.checkNumber(2);
         Log.d("SENSO", "Ergebnis ist "+result);
@@ -26,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         int smallStraight = dice.checkSmallStraight();
         Log.d("SENSO", "kleine Straße bringt "+smallStraight+" Punkte!");
 
-        /*test JB*/
+        /*test JB
         int threeofakind = dice.check3OfAKind();
         Log.d("SENSO", "3 of a kind ist "+threeofakind);
 
@@ -38,12 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         int chance = dice.checkChance();
         Log.d("SENSO", "Chance ist "+chance);
-
-        PlayGame game = new PlayGame();
-        int points = game.calculateResult();
-        Log.d("SENSO", "Anzahl der Punkte "+points);
-
-
-    }
-
+    }*/
 }
+
+
