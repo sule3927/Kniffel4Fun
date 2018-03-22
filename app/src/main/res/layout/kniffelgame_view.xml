@@ -138,7 +138,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="@color/colorBrightYellow"
         android:contentDescription="@string/strTxtDice6"
         android:text="Score6"
@@ -151,7 +150,7 @@
         app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDice3"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnDice1"
@@ -211,7 +210,6 @@
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:contentDescription="@string/strBtnDice4"
         android:src="@drawable/dice4"
@@ -226,17 +224,15 @@
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_marginBottom="312dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:contentDescription="@string/strBtnDice5"
+        android:src="@drawable/dice5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtDice6"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/btnDice4"
         app:layout_constraintTop_toBottomOf="@+id/btnDice2"
-        app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/dice5"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnDice6"
@@ -244,7 +240,6 @@
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:contentDescription="@string/strBtnDice6"
         android:src="@drawable/dice6"
@@ -275,7 +270,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:src="@drawable/house"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -291,7 +285,6 @@
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:text="@string/strBtn4er"
         android:textColor="@color/colorPrimary"
@@ -311,7 +304,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:text="@string/strBtn3er"
         android:textColor="@color/colorPrimary"
@@ -331,7 +323,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:src="@drawable/small_street"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -347,7 +338,6 @@
         android:layout_height="@android:dimen/app_icon_size"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:src="@drawable/large_street"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -364,15 +354,14 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
+        android:src="@drawable/question"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHouse"
-        app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/question" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnKniffel"
@@ -381,7 +370,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary"
         android:text="@string/strBtnKniffel"
         android:textColor="@android:color/background_light"
@@ -389,9 +378,103 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71000004" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLargeStreet"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iviewDice1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/dice1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iviewDice2"
+        app:layout_constraintTop_toBottomOf="@+id/btnRollDice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iviewDice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/dice2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRollDice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iviewDice3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/dice3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iviewDice1"
+        app:layout_constraintTop_toBottomOf="@+id/btnRollDice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iviewDice4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/dice4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iviewDice3"
+        app:layout_constraintTop_toBottomOf="@+id/btnRollDice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iviewDice5"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/dice5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iviewDice4"
+        app:layout_constraintTop_toBottomOf="@+id/btnRollDice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRollDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:shape="oval"
+        android:text="@string/strBtnRollDice"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnKniffel"
+        app:layout_constraintVertical_bias="0.031" />
 
 
 </android.support.constraint.ConstraintLayout>
