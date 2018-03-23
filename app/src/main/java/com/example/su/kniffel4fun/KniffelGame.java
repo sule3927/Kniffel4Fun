@@ -25,7 +25,8 @@ public class KniffelGame extends Activity implements OnClickListener{
     private ImageButton smallStreetBtn;
     private ImageButton largeStreetBtn;
     private ImageButton chanceBtn;
-
+    private Button kniffelBtn;
+    private Button rollDiceBtn;
     private ImageButton backBtn;
 
     @Override
@@ -69,7 +70,11 @@ public class KniffelGame extends Activity implements OnClickListener{
         chanceBtn = (ImageButton) findViewById(R.id.btnChance);
         chanceBtn.setOnClickListener(this);
 
+        kniffelBtn = (Button) findViewById(R.id.btnKniffel);
+        kniffelBtn.setOnClickListener(this);
 
+        rollDiceBtn =(Button) findViewById(R.id.btnRollDice);
+        rollDiceBtn.setOnClickListener(this);
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
         backBtn.setOnClickListener(this);
