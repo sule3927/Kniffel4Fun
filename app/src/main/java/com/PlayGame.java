@@ -42,7 +42,6 @@ public class PlayGame {
         if (sumTop>=63){
             sumTotal+=35;
         }
-
         return sumTotal;
     }
 
