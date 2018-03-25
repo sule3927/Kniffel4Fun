@@ -12,16 +12,24 @@
     <string name="strBtnDice4">Wuerfel 4</string>
     <string name="strBtnDice5">Wuerfel 5</string>
     <string name="strBtnDice6">Wuerfel 6</string>
-    <string name="strTxtDice1">Score 1</string>
-    <string name="strTxtDice2">Score 2</string>
-    <string name="strTxtDice3">Score 3</string>
-    <string name="strTxtDice4">Score 4</string>
-    <string name="strTxtDice5">Score 5</string>
-    <string name="strTxtDice6">Score 6</string>
+    <string name="strTxtDice1">111</string>
+    <string name="strTxtDice2">222</string>
+    <string name="strTxtDice3">333</string>
+    <string name="strTxtDice4">444</string>
+    <string name="strTxtDice5">555</string>
+    <string name="strTxtDice6">666</string>
+    <string name="strTxt3er">3er</string>
+    <string name="strTxt4er">4er</string>
+    <string name="strTxtHouse">HHH</string>
+    <string name="strTxtSmallStreet">SS</string>
+    <string name="strTxtLargeStreet">LS</string>
+    <string name="strTxtChance">CCC</string>
     <string name="strBtn3er">3er</string>
     <string name="strBtn4er">4er</string>
     <string name="strBtnKniffel">KNIFFEL +50</string>
     <string name="strBtnRollDice">Wuerfeln</string>
+    <string name="strBtnScore">Score</string>
+
 
 
 </resources>

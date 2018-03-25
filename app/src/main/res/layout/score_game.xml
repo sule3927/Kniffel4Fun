@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice1"
+                android:src="@drawable/dice1" />
+
+            <TextView
+                android:id="@+id/txtPlayer1ScoreDice1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2ScoreDice1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3ScoreDice1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice2"
+                android:src="@drawable/dice2" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Dice2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Dice2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Dice2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice3"
+                android:src="@drawable/dice3" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Dice3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Dice3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Dice3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice4"
+                android:src="@drawable/dice4" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Dice4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Dice4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Dice4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice5"
+                android:src="@drawable/dice5" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Dice5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Dice5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Dice5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnDice6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtnDice6"
+                android:src="@drawable/dice6" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Dice6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Dice6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Dice6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn3er"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtn3er"
+                android:text="@string/strBtn3er"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer1_3er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2_3er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3_3er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn4er"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription="@string/strBtn4er"
+                android:text="@string/strBtn4er"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer1_4er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2_4er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3_5er"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnHouse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                android:src="@drawable/house" />
+
+            <TextView
+                android:id="@+id/txtPlayer1House"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2House"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3House"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnSmallStreet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                android:src="@drawable/small_street" />
+
+            <TextView
+                android:id="@+id/txtPlayer1SmallStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2SmallStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3SmallStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnLargeStreet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                android:src="@drawable/large_street" />
+
+            <TextView
+                android:id="@+id/txtPlayer1LargeStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2LargeStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3LargeStreet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnChance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                android:src="@drawable/question" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Chance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Chance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Chance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKniffel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:text="@string/strBtnKniffel"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer1Kniffel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2Kniffel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3Kniffel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnScoreAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer1ScoreAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer2ScoreAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlayer3ScoreAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorBrightYellow"
+                android:contentDescription=""
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

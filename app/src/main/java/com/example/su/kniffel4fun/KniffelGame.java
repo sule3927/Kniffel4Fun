@@ -1,6 +1,7 @@
 package com.example.su.kniffel4fun;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +12,7 @@ import android.widget.ImageButton;
  * Created by Su on 18.03.2018.
  */
 
-public class KniffelGame extends Activity implements OnClickListener{
+public class KniffelGame extends Activity implements View.OnClickListener {
 
     private ImageButton dice1Btn;
     private ImageButton dice2Btn;
@@ -28,6 +29,7 @@ public class KniffelGame extends Activity implements OnClickListener{
     private Button kniffelBtn;
     private Button rollDiceBtn;
     private ImageButton backBtn;
+    private Button scoreBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,15 +75,26 @@ public class KniffelGame extends Activity implements OnClickListener{
         kniffelBtn = (Button) findViewById(R.id.btnKniffel);
         kniffelBtn.setOnClickListener(this);
 
-        rollDiceBtn =(Button) findViewById(R.id.btnRollDice);
+        rollDiceBtn = (Button) findViewById(R.id.btnRollDice);
         rollDiceBtn.setOnClickListener(this);
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
         backBtn.setOnClickListener(this);
+
+        scoreBtn = (Button) findViewById(R.id.btnScore);
+        scoreBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        finish();
+
+
+
+        int clickedElementScore = view.getId();
+
+        if (clickedElementScore == R.id.btnScore) {
+            Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
+            startActivity(intent);
+        }
     }
 }
