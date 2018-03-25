@@ -88,7 +88,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-
+        finish();
 
         int clickedElementScore = view.getId();
 

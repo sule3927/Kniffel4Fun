@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".KniffelGame"/>
         <activity android:name=".ScoreGame"/>
+        <activity android:name=".EndGame"/>
     </application>
 
 </manifest>

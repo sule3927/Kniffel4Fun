@@ -28,5 +28,8 @@
     <string name="strBtnKniffel">KNIFFEL +50</string>
     <string name="strBtnRollDice">Roll the Dice</string>
     <string name="strBtnScore">Score</string>
+    <string name="strBtnEndGame">Quit Game</string>
+    <string name="strTxtBye">Bye, bye, see you!</string>
+
 
 </resources>
