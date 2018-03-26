@@ -18,6 +18,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
     private TextView txtPlayer;
     private ImageButton dice1Btn;
+    private TextView txtDice1;
     private ImageButton dice2Btn;
     private ImageButton dice3Btn;
     private ImageButton dice4Btn;
@@ -44,6 +45,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
+
+        txtDice1 = (TextView) findViewById(R.id.txtDice1);
+        txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
+        //txtDice1.setText(PlayGame.getCurrPlayer().getName());
 
         dice2Btn = (ImageButton) findViewById(R.id.btnDice2);
         dice2Btn.setOnClickListener(this);
@@ -92,6 +97,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 PlayGame.changePlayer();
                 txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+                //funktioniert noch nicht
+                txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
             }
         });
 

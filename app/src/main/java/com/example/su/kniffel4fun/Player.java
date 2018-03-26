@@ -26,8 +26,11 @@ public class Player {
        /*methos getPoints
        * return int -> the points at the arraypostition
        * param: Player and arrayIndex -> the position where the value is saved*/
-       public int getPoints(Player player, int arrayIndex){
-          return player.scores[arrayIndex];
-
+       public int getPoints(int arrayIndex){
+          return this.scores[arrayIndex];
        }
+
+        public void setPoints(int points, int arrayIndex){
+            this.scores[arrayIndex] = points;
+        }
 }

@@ -33,6 +33,8 @@ public class PlayGame {
         Player player1 = new Player("Susann");
         Player player2 = new Player("Judith");
         setCurrPlayer(player1);
+        player1.setPoints(3,0);
+        player2.setPoints(4,0);
         return 12; /*dieser Returnwert wird nicht gebraucht, allerdings funktionierte die Methode nur, wenn ich einer Varaiblen den WErt zuweise*/
     }
 
