@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+       /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
+        PlayGame game = new PlayGame();
+        int i = game.testPlayer();
+
 /*        /*test MF
         checkDice dice = new checkDice();
         int result = dice.checkNumber(2);

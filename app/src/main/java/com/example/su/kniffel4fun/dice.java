@@ -11,13 +11,13 @@ public class dice {
     private int pipes;
     private boolean rollable;
     private Random randomGenerator;
-    private int countRools;
+    private int countRolls;
 
     //contructors
     public dice() {
         pipes = 0;
         rollable = true;
-        countRools = 0;
+        countRolls = 0;
     }
 
     //methods
@@ -38,12 +38,12 @@ public class dice {
         this.rollable = rollable;
     }
 
-    public int getCountRools() {
-        return countRools;
+    public int getCountRolls() {
+        return countRolls;
     }
 
-    public void setCountRools(int countRools) {
-        this.countRools = countRools;
+    public void setCountRolls(int countRolls) {
+        this.countRolls = countRolls;
     }
 
     /*public method rollDice
@@ -51,10 +51,10 @@ public class dice {
     * and sets the pipes of the dice
     * counts how often the dice was rolled*/
     public void rollThisDice() {
-        if (this.isRollable() == true && this.getCountRools()< 3){
+        if (this.isRollable() == true && this.getCountRolls()< 3){
             randomGenerator = new Random();
             setPipes(randomGenerator.nextInt(6) + 1);
-            setCountRools(getCountRools()+1);
+            setCountRolls(getCountRolls()+1);
         }
     }
 }

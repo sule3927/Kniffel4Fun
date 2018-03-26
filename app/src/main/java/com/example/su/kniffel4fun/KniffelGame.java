@@ -3,10 +3,12 @@ package com.example.su.kniffel4fun;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 /**
  * Created by Su on 18.03.2018.
@@ -14,6 +16,7 @@ import android.widget.ImageButton;
 
 public class KniffelGame extends Activity implements View.OnClickListener {
 
+    private TextView txtPlayer;
     private ImageButton dice1Btn;
     private ImageButton dice2Btn;
     private ImageButton dice3Btn;
@@ -36,6 +39,9 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
 
+        txtPlayer = (TextView) findViewById(R.id.txtPlayer);
+        txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
 
@@ -55,7 +61,12 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice6Btn.setOnClickListener(this);
 
         tripletsBtn = (Button) findViewById(R.id.btn3er);
-        tripletsBtn.setOnClickListener(this);
+        tripletsBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Hallo");
+            }
+        });
 
         allfoursBtn = (Button) findViewById(R.id.btn4er);
         allfoursBtn.setOnClickListener(this);
@@ -76,7 +87,13 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         kniffelBtn.setOnClickListener(this);
 
         rollDiceBtn = (Button) findViewById(R.id.btnRollDice);
-        rollDiceBtn.setOnClickListener(this);
+        rollDiceBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PlayGame.changePlayer();
+                txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+            }
+        });
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
         backBtn.setOnClickListener(this);
@@ -84,6 +101,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         scoreBtn = (Button) findViewById(R.id.btnScore);
         scoreBtn.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
@@ -97,4 +115,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             startActivity(intent);
         }
     }
+/*Test MF*/
+    //Log.d("SENSO", "Ergebnis ist "+player1.getName());
 }
