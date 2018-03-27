@@ -40,10 +40,11 @@ public class dice {
     * generates a random number between 1 and 6 (like a dice)
     * and sets the pipes of the dice*/
     public void rollThisDice() {
-        //if (this.isRollable() == true){
+        if (this.isRollable() == true){
             randomGenerator = new Random();
             setPipes(randomGenerator.nextInt(6) + 1);
-        System.out.println(getPipes());
-        //}
+            System.out.println(getPipes());
+        }
     }
 }
+

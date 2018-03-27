@@ -7,4 +7,5 @@
     <color name="colorMiddleYellow">#f3f781</color>
     <color name="colorMiddleRed">#FF0000</color>
     <color name="colorDarkRed">#d80027</color>
+    <color name="colorGrey">#D3D3D3</color>
 </resources>
