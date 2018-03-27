@@ -1,13 +1,12 @@
 package com.example.su.kniffel4fun;
 
-import com.example.su.kniffel4fun.Player;
-
 /**
  * Created by judith on 06.03.2018.
  */
 
 public class PlayGame {
     private static Player currPlayer;
+    private static turn currTurn;
 
     public static Player getCurrPlayer() {
         return currPlayer;
@@ -15,6 +14,14 @@ public class PlayGame {
 
     public static void setCurrPlayer(Player currPlayer) {
         PlayGame.currPlayer = currPlayer;
+    }
+
+    public static turn getCurrTurn() {
+        return currTurn;
+    }
+
+    public static void setCurrTurn(turn currTurn) {
+        PlayGame.currTurn = currTurn;
     }
 
     public static void changePlayer(){
@@ -35,6 +42,8 @@ public class PlayGame {
         setCurrPlayer(player1);
         player1.setPoints(3,0);
         player2.setPoints(4,0);
+        turn turn = new turn();
+        setCurrTurn(turn);
         return 12; /*dieser Returnwert wird nicht gebraucht, allerdings funktionierte die Methode nur, wenn ich einer Varaiblen den WErt zuweise*/
     }
 

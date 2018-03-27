@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.sql.Array;
+import java.util.ArrayList;
+
 /**
  * Created by Su on 18.03.2018.
  */
@@ -89,16 +92,22 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         chanceBtn.setOnClickListener(this);
 
         kniffelBtn = (Button) findViewById(R.id.btnKniffel);
-        kniffelBtn.setOnClickListener(this);
+        kniffelBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PlayGame.changePlayer();
+                txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+                txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
+            }
+        });
 
         rollDiceBtn = (Button) findViewById(R.id.btnRollDice);
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                PlayGame.changePlayer();
-                txtPlayer.setText(PlayGame.getCurrPlayer().getName());
-                //funktioniert noch nicht
-                txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
+                PlayGame.getCurrTurn().rollAllDice();
+                int[] allDice = PlayGame.getCurrTurn().getAllDice();
+                Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
             }
         });
 
