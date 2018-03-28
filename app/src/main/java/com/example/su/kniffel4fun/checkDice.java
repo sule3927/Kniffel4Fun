@@ -37,6 +37,7 @@ public class checkDice {
     * @author: Merle Friedrichsen
     * @return: points for fullhouse / 0 if no no fullhouse*/
     public int checkFullhouse () {
+
         Arrays.sort(dice);
         if ((dice[0] == dice[1]) && (dice[3] == dice[4]) && ((dice[2] == dice[1]) || (dice[2] == dice[3]))){
             return 25;

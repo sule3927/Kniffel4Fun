@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button startBtn;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         startBtn = (Button) findViewById(R.id.btnStart);
         startBtn.setOnClickListener(this);
+
 
         initList();
 
@@ -60,12 +62,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, KniffelGame.class);
             startActivity(intent);
 
+
         }
     }
 
-       /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-        PlayGame game = new PlayGame();
-        int i = game.testPlayer();
+
 
 /*        /*test MF
         checkDice dice = new checkDice();
