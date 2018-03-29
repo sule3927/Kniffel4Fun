@@ -3,9 +3,11 @@ package com.example.su.kniffel4fun;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -17,10 +19,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AvatarAdapter mAdapter;
 
     private Button startBtn;
+    private Button btnNewPlayer;
+    private EditText editName;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        editName = (EditText) findViewById(R.id.editName);
 
         startBtn = (Button) findViewById(R.id.btnStart);
         startBtn.setOnClickListener(this);
@@ -28,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initList();
 
         Spinner spinnerAvatar = findViewById(R.id.spiAvatar);
+        final int selectedID = spinnerAvatar.getSelectedItemPosition();
 
         mAdapter = new AvatarAdapter(this, mAvatarList);
         spinnerAvatar.setAdapter(mAdapter);
@@ -36,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 AvatarItem clickedItem = (AvatarItem) parent.getItemAtPosition(position);
+                Log.d("SENSO", "Ergebnis ist "+clickedItem.getAvatarImage());
             }
 
             @Override
@@ -44,6 +52,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         });
+
+        btnNewPlayer = (Button) findViewById(R.id.btnNewPlayer);
+        btnNewPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Player player = new Player(editName.getText().toString());
+                //player.setAvatarID(selectedID);
+                PlayGame.setCurrPlayer(Player.allPlayers.get(0));
+
+            }
+        });
     }
     private void initList(){
         mAvatarList = new ArrayList<>();
@@ -51,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAvatarList.add(new AvatarItem(R.drawable.thief));
         mAvatarList.add(new AvatarItem(R.drawable.mario));
     }
+
+
 
     @Override
     public void onClick(View view) {

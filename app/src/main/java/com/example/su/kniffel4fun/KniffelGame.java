@@ -18,6 +18,7 @@ import android.widget.TextView;
 public class KniffelGame extends Activity implements View.OnClickListener {
 
     private TextView txtPlayer;
+    private ImageView iviewAvatar;
     private ImageButton dice1Btn;
     private TextView txtDice1;
     private ImageButton dice2Btn;
@@ -49,12 +50,14 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
 
+        iviewAvatar = (ImageView) findViewById(R.id.iviewAvatar) ;
+        iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
 
         txtDice1 = (TextView) findViewById(R.id.txtDice1);
         txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
-        //txtDice1.setText(PlayGame.getCurrPlayer().getName());
 
         dice2Btn = (ImageButton) findViewById(R.id.btnDice2);
         dice2Btn.setOnClickListener(this);
@@ -100,6 +103,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 PlayGame.changePlayer();
                 txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+                //iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                 txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
             }
         });
