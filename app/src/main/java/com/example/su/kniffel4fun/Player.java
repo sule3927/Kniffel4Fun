@@ -7,28 +7,29 @@ import java.util.ArrayList;
  */
 
 public class Player {
-       private String name = "";
-       private int highscore = 0;
-       private int avatarID = 0;
-       public int[] scores = new int[13];
-       public static ArrayList<Player> allPlayers = new ArrayList<Player>();
+    private String name = "";
+    private int highscore = 0;
+    private int avatarID = 0;
+    public int[] scores = new int[13];
+    public static ArrayList<Player> allPlayers = new ArrayList<Player>();
 
-       /*constructor*/
-       public Player (String newName) {
-            this.name = newName;
-            allPlayers.add(this);
-        }
+    /*constructor*/
+    public Player(String newName) {
+        this.name = newName;
+        this.avatarID = 2131099732;
+        allPlayers.add(this);
+    }
 
-    public Player (String newName, int avatarID) {
+    public Player(String newName, int avatarID) {
         this.name = newName;
         this.avatarID = avatarID;
         allPlayers.add(this);
     }
 
-       /*methods*/
-       public String getName() {
-            return name;
-        }
+    /*methods*/
+    public String getName() {
+        return name;
+    }
 
     public int getAvatarID() {
         return avatarID;
@@ -41,11 +42,11 @@ public class Player {
     /*methos getPoints
                * return int -> the points at the arraypostition
                * param: Player and arrayIndex -> the position where the value is saved*/
-       public int getPoints(int arrayIndex){
-          return this.scores[arrayIndex];
-       }
+    public int getPoints(int arrayIndex) {
+        return this.scores[arrayIndex];
+    }
 
-       public void setPoints(int points, int arrayIndex){
-            this.scores[arrayIndex] = points;
-        }
+    public void setPoints(int points, int arrayIndex) {
+        this.scores[arrayIndex] = points;
+    }
 }

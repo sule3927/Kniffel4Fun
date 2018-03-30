@@ -12,7 +12,7 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private ArrayList<AvatarItem> mAvatarList;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button startBtn;
     private Button btnNewPlayer;
     private EditText editName;
+    private int selectedID;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initList();
 
-        Spinner spinnerAvatar = findViewById(R.id.spiAvatar);
-        final int selectedID = spinnerAvatar.getSelectedItemPosition();
+        final Spinner spinnerAvatar = findViewById(R.id.spiAvatar);
 
         mAdapter = new AvatarAdapter(this, mAvatarList);
         spinnerAvatar.setAdapter(mAdapter);
@@ -43,28 +43,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 AvatarItem clickedItem = (AvatarItem) parent.getItemAtPosition(position);
-                Log.d("SENSO", "Ergebnis ist "+clickedItem.getAvatarImage());
+                Log.d("SENSO", "Ergebnis ist " + clickedItem.getAvatarImage());
+                setSelectedID(clickedItem.getAvatarImage());
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
-
         });
 
         btnNewPlayer = (Button) findViewById(R.id.btnNewPlayer);
         btnNewPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Player player = new Player(editName.getText().toString());
-                //player.setAvatarID(selectedID);
-                PlayGame.setCurrPlayer(Player.allPlayers.get(0));
-
+                Player player = new Player(editName.getText().toString(), getSelectedID());
             }
         });
     }
-    private void initList(){
+
+    private void initList() {
         mAvatarList = new ArrayList<>();
         mAvatarList.add(new AvatarItem(R.drawable.astronaut));
         mAvatarList.add(new AvatarItem(R.drawable.thief));
@@ -72,21 +69,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
     @Override
     public void onClick(View view) {
         int clickedElement = view.getId();
 
-        if (clickedElement == R.id.btnStart){
+        if (clickedElement == R.id.btnStart) {
             Intent intent = new Intent(MainActivity.this, KniffelGame.class);
             startActivity(intent);
 
         }
     }
 
-       /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-        PlayGame game = new PlayGame();
-        int i = game.testPlayer();
+    public int getSelectedID() {
+        return selectedID;
+    }
+
+    public void setSelectedID(int selectedID) {
+        this.selectedID = selectedID;
+    }
+
+    /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
+    //PlayGame game = new PlayGame();
+    //int i = game.testPlayer();
 
 /*        /*test MF
         checkDice dice = new checkDice();

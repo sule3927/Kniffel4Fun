@@ -47,10 +47,12 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
 
+        PlayGame game = new PlayGame();
+
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
 
-        iviewAvatar = (ImageView) findViewById(R.id.iviewAvatar) ;
+        iviewAvatar = (ImageView) findViewById(R.id.iviewAvatar);
         iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
@@ -103,7 +105,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 PlayGame.changePlayer();
                 txtPlayer.setText(PlayGame.getCurrPlayer().getName());
-                //iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+                iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                 txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
             }
         });
@@ -185,7 +187,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 PlayGame.getCurrTurn().rollAllDice();
                 int[] allDice = PlayGame.getCurrTurn().getAllDice();
                 //testzwecke
-                Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
+                Log.d("SENSO", "Würfel sind " + allDice[0] + " , " + allDice[1] + " , " + allDice[2] + " , " + allDice[3] + " , " + allDice[4]);
                 KniffelGame.showDice(iviewDice1, allDice[0]);
                 KniffelGame.showDice(iviewDice2, allDice[1]);
                 KniffelGame.showDice(iviewDice3, allDice[2]);
@@ -215,8 +217,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
-    public static void showDice(ImageView dice, int pipes){
-        switch (pipes){
+    public static void showDice(ImageView dice, int pipes) {
+        switch (pipes) {
             case 1:
                 dice.setImageResource(R.drawable.dice1);
                 break;
