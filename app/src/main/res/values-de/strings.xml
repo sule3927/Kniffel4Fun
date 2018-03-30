@@ -3,7 +3,9 @@
     <string name="app_name">Kniffel4Fun</string>
     <string name="strBtnFinish">Beenden</string>
     <string name="strBtnStart">Los gehts ...</string>
-    <string name="strTxtHeader">WILLKOMMEN</string>
+    <string name="strTxtHeader">WILLKOMMEN ZU KNIFFEL4FUN</string>
+    <string name="strTxtPlayerWelcome">Gebe deinen Namen ein</string>
+    <string name="strTxtChooseAvatar">Wähle deinen Avatar</string>
     <string name="strTxtScore">Score</string>
     <string name="strBtnBack">Zurueck</string>
     <string name="strBtnDice1">Wuerfel 1</string>

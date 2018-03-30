@@ -2,7 +2,9 @@
     <string name="app_name">Yatzi4Fun</string>
     <string name="strBtnFinish">Exit</string>
     <string name="strBtnStart">Lets go ...</string>
-    <string name="strTxtHeader">WELCOME</string>
+    <string name="strTxtHeader">WELCOME TO YATZI4FUN</string>
+    <string name="strTxtPlayerWelcome">Input your Name</string>
+    <string name="strTxtChooseAvatar">Choose your Avatar</string>
     <string name="strTxtScore">Score</string>
     <string name="strBtnBack">Go back</string>
     <string name="strBtnDice1">Dice 1</string>

@@ -2,6 +2,8 @@ package com.example.su.kniffel4fun;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,10 +44,15 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private ImageButton backBtn;
     private Button scoreBtn;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
+
+
 
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
@@ -215,8 +222,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
-    public static void showDice(ImageView dice, int pipes){
-        switch (pipes){
+    public static void showDice(ImageView dice, int pipes) {
+        switch (pipes) {
             case 1:
                 dice.setImageResource(R.drawable.dice1);
                 break;
@@ -236,7 +243,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 dice.setImageResource(R.drawable.dice6);
                 break;
         }
-
-
     }
+
+
 }
+
