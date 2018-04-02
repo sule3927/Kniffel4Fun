@@ -2,8 +2,7 @@ package com.example.su.kniffel4fun;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.SoundPool;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,15 +43,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private ImageButton backBtn;
     private Button scoreBtn;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
-
-
 
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
@@ -198,7 +192,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 KniffelGame.showDice(iviewDice3, allDice[2]);
                 KniffelGame.showDice(iviewDice4, allDice[3]);
                 KniffelGame.showDice(iviewDice5, allDice[4]);
-            }
+
+                }
         });
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
@@ -219,8 +214,13 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         if (clickedElementScore == R.id.btnScore) {
             Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
             startActivity(intent);
+
         }
     }
+
+    //MediaPlayer für den Würfel-Sound
+    //final MediaPlayer rollDiceSound;
+
 
     public static void showDice(ImageView dice, int pipes) {
         switch (pipes) {
@@ -244,7 +244,5 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 break;
         }
     }
-
-
 }
 
