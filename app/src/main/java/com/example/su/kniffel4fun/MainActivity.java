@@ -2,9 +2,12 @@ package com.example.su.kniffel4fun;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +17,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-
     private ArrayList<AvatarItem> mAvatarList;
     private AvatarAdapter mAdapter;
 
@@ -22,9 +24,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnNewPlayer;
     private EditText editName;
 
+    private Animation animationJiggle;
+    private Handler handler = new Handler();
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        handler.postDelayed(new JiggleButton(),1000*10);
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        animationJiggle = AnimationUtils.loadAnimation(this, R.anim.jiggleStartBtn);
+
+       /* class JiggleButton implements Runnable{
+
+            @Override
+            public void run() {
+                startBtn.startAnimation(animationJiggle);
+            }
+        } */
 
         editName = (EditText) findViewById(R.id.editName);
 
@@ -51,7 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
 
+
+
         });
+
 
         btnNewPlayer = (Button) findViewById(R.id.btnNewPlayer);
         btnNewPlayer.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+
     private void initList(){
         mAvatarList = new ArrayList<>();
         mAvatarList.add(new AvatarItem(R.drawable.astronaut));
@@ -84,9 +111,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-       /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-        PlayGame game = new PlayGame();
-        int i = game.testPlayer();
+/*Methode zur Animation des Start-Buttons*/
+
+    private class JiggleButton implements Runnable {
+        @Override
+        public void run() {
+            startBtn.startAnimation(animationJiggle);
+        }
+    }
+
+    /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
+    PlayGame game = new PlayGame();
+    int i = game.testPlayer();
 
 /*        /*test MF
         checkDice dice = new checkDice();
@@ -112,6 +148,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int chance = dice.checkChance();
         Log.d("SENSO", "Chance ist "+chance);
     }*/
+
+
 }
 
 
