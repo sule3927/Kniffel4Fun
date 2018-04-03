@@ -22,14 +22,16 @@ public class checkDice {
         int i;
         int returnvalue = 0;
         int sum = 0;
+        int arrayIndex = number - 1;
         for (i = 0; i < 5; i++) {
             if (dice[i] == number) {
                 returnvalue += 1;
                 sum = returnvalue*number;
             }
-            //else Streichen
+            else {
+
+            }
         }
-        int arrayIndex = number - 1;
         PlayGame.getCurrPlayer().setPoints(sum, arrayIndex);
     }
 
