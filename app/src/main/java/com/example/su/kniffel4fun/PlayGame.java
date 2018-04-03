@@ -7,10 +7,11 @@ package com.example.su.kniffel4fun;
 public class PlayGame {
     private static Player currPlayer;
     private static turn currTurn;
+    private static int countRounds = 0;
 
     public PlayGame() {
         turn turn = new turn();
-        setCurrTurn(turn); 
+        setCurrTurn(turn);
     }
 
     public static Player getCurrPlayer() {
@@ -30,6 +31,7 @@ public class PlayGame {
     }
 
     public static void changePlayer(){
+        if (countRounds <= 13){
         turn turn = new turn();
         setCurrTurn(turn);
         Player currPlayer = PlayGame.getCurrPlayer();
@@ -37,9 +39,14 @@ public class PlayGame {
         //wenn Ende des Array erreicht, fange von vorne an
         if (indexNext == Player.allPlayers.size()){
             indexNext = 0;
+            PlayGame.countRounds++;
         }
         Player nextPlayer = Player.allPlayers.get(indexNext);
         PlayGame.setCurrPlayer(nextPlayer);
+        }
+        else {
+            //Spiel beenden
+        }
     }
 
     /*this method creates two players for test purposes*/
