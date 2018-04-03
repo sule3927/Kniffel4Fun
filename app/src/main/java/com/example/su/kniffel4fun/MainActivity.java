@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        animationJiggle = AnimationUtils.loadAnimation(this, R.anim.jiggleStartBtn);
+        animationJiggle = AnimationUtils.loadAnimation(this, R.anim.jigglestartbtn);
 
-       /* class JiggleButton implements Runnable{
+        class JiggleButton implements Runnable{
 
             @Override
             public void run() {
                 startBtn.startAnimation(animationJiggle);
             }
-        } */
+        }
 
         editName = (EditText) findViewById(R.id.editName);
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 /*Methode zur Animation des Start-Buttons*/
 
-    private class JiggleButton implements Runnable {
+   private class JiggleButton implements Runnable {
         @Override
         public void run() {
             startBtn.startAnimation(animationJiggle);

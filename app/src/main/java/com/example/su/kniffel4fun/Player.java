@@ -46,6 +46,5 @@ public class Player {
        }
 
        public void setPoints(int points, int arrayIndex){
-            this.scores[arrayIndex] = points;
-        }
+           this.scores[arrayIndex] = points;      }
 }

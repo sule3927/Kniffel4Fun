@@ -22,56 +22,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            
 
-                <ImageView
-                    android:id="@+id/iviewPodium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="2"
-                    android:background="@color/colorMiddleYellow"
-                    android:padding="8dp"
-                    android:src="@drawable/podium" />
 
-                <ImageButton
-                    android:id="@+id/iviewAstronaut"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorMiddleYellow"
-                    android:contentDescription="@string/strViewAstronaut"
-                    android:padding="8dp"
-                    android:src="@drawable/astronaut" />
+            <ImageButton
+                android:id="@+id/iviewAstronaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewAstronaut"
+                android:padding="8dp"
+                android:src="@drawable/astronaut" />
 
-                <ImageButton
-                    android:id="@+id/iviewThief"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorMiddleYellow"
-                    android:contentDescription="@string/strViewThief"
-                    android:padding="8dp"
-                    android:src="@drawable/thief" />
+            <ImageButton
+                android:id="@+id/iviewThief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewThief"
+                android:padding="8dp"
+                android:src="@drawable/thief" />
 
-                <ImageButton
-                    android:id="@+id/iviewMario"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorMiddleYellow"
-                    android:contentDescription="@string/strViewMario"
-                    android:padding="8dp"
-                    android:src="@drawable/mario" />
+            <ImageButton
+                android:id="@+id/iviewMario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewMario"
+                android:padding="8dp"
+                android:src="@drawable/mario" />
 
 
         </LinearLayout>
