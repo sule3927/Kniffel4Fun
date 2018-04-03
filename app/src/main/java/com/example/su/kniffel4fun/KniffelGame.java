@@ -1,10 +1,8 @@
 package com.example.su.kniffel4fun;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -317,15 +315,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 PlayGame.getCurrTurn().rollAllDice();
-                int[] allDice = PlayGame.getCurrTurn().getAllDice();
-                //testzwecke
-               // Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
-                KniffelGame.showDice(iviewDice1, allDice[0]);
-                KniffelGame.showDice(iviewDice2, allDice[1]);
-                KniffelGame.showDice(iviewDice3, allDice[2]);
-                KniffelGame.showDice(iviewDice4, allDice[3]);
-                KniffelGame.showDice(iviewDice5, allDice[4]);
-
+                showAllDices();
             }
         });
 
@@ -339,7 +329,9 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     public void nextPlayer() {
         PlayGame.changePlayer();
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+        iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
         showScores();
+        showAllDices();
     }
 
     @Override
@@ -378,6 +370,9 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
     public static void showDice(ImageView dice, int pipes) {
         switch (pipes) {
+            case 0:
+                dice.setColorFilter(R.drawable.question);
+                break;
             case 1:
                 dice.setImageResource(R.drawable.dice1);
                 break;
@@ -397,6 +392,17 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 dice.setImageResource(R.drawable.dice6);
                 break;
         }
+    }
+
+    public void showAllDices(){
+        int[] allDice = PlayGame.getCurrTurn().getAllDice();
+        //testzwecke
+        Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
+        KniffelGame.showDice(iviewDice1, allDice[0]);
+        KniffelGame.showDice(iviewDice2, allDice[1]);
+        KniffelGame.showDice(iviewDice3, allDice[2]);
+        KniffelGame.showDice(iviewDice4, allDice[3]);
+        KniffelGame.showDice(iviewDice5, allDice[4]);
     }
 
 

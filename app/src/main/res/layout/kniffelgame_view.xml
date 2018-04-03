@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorMiddleYellow">
@@ -391,7 +390,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorBrightYellow"
                 android:contentDescription="@string/strViewDice1"
-                android:src="@drawable/dice1" />
+                android:src="@drawable/question" />
 
             <ImageView
                 android:id="@+id/iviewDice2"
@@ -402,7 +401,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorBrightYellow"
                 android:contentDescription="@string/strViewDice2"
-                android:src="@drawable/dice2" />
+                android:src="@drawable/question" />
 
             <ImageView
                 android:id="@+id/iviewDice3"
@@ -413,7 +412,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorBrightYellow"
                 android:contentDescription="@string/strViewDice3"
-                android:src="@drawable/dice3" />
+                android:src="@drawable/question" />
 
             <ImageView
                 android:id="@+id/iviewDice4"
@@ -424,7 +423,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorBrightYellow"
                 android:contentDescription="@string/strViewDice4"
-                android:src="@drawable/dice4" />
+                android:src="@drawable/question" />
 
             <ImageView
                 android:id="@+id/iviewDice5"
@@ -433,7 +432,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorBrightYellow"
                 android:contentDescription="@string/strViewDice5"
-                android:src="@drawable/dice5" />
+                android:src="@drawable/question" />
         </LinearLayout>
 
         <LinearLayout

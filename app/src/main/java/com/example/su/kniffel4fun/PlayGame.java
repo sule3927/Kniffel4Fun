@@ -33,8 +33,8 @@ public class PlayGame {
 
     public static void changePlayer(){
         if (countRounds <= 13){
-        turn turn = new turn();
-        setCurrTurn(turn);
+        turn nextTurn = new turn();
+        setCurrTurn(nextTurn);
         Player currPlayer = PlayGame.getCurrPlayer();
         int indexNext = 1+Player.allPlayers.indexOf(currPlayer);
         //wenn Ende des Array erreicht, fange von vorne an
