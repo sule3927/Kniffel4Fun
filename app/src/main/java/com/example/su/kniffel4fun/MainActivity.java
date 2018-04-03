@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 Player player = new Player(editName.getText().toString(), getSelectedID());
+                Toast.makeText(MainActivity.this, editName.getText().toString()+" "+ getString(R.string.strPlayerCreated), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -112,8 +114,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-    PlayGame game = new PlayGame();
-    int i = game.testPlayer();
+//    PlayGame game = new PlayGame();
+//    int i = game.testPlayer();
 
     public int getSelectedID() {
         return selectedID;
