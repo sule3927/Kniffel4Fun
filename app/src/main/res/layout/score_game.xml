@@ -1,24 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorMiddleYellow">
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="400dp"
-        android:layout_marginBottom="8dp"
+        android:id="@+id/LayoutScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/iviewAstronaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewAstronaut"
+                android:padding="8dp"
+                android:src="@drawable/astronaut" />
+
+            <ImageButton
+                android:id="@+id/iviewThief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewThief"
+                android:padding="8dp"
+                android:src="@drawable/thief" />
+
+            <ImageButton
+                android:id="@+id/iviewMario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strViewMario"
+                android:padding="8dp"
+                android:src="@drawable/mario" />
+
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,19 +72,28 @@
                 android:id="@+id/btnDice1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice1"
+                android:paddingBottom="8dp"
                 android:src="@drawable/dice1" />
 
             <TextView
                 android:id="@+id/txtPlayer1ScoreDice1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="8dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -50,9 +103,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="8dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -62,9 +115,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="8dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -81,7 +134,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice2"
                 android:src="@drawable/dice2" />
 
@@ -90,9 +143,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -102,9 +154,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -114,9 +165,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -132,7 +182,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice3"
                 android:src="@drawable/dice3" />
 
@@ -141,9 +191,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -153,9 +202,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -165,9 +213,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -183,7 +230,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice4"
                 android:src="@drawable/dice4" />
 
@@ -192,9 +239,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -204,9 +250,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -216,9 +261,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -234,7 +278,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice5"
                 android:src="@drawable/dice5" />
 
@@ -243,9 +287,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -255,9 +298,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -267,9 +309,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -285,7 +326,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnDice6"
                 android:src="@drawable/dice6" />
 
@@ -294,9 +335,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -306,9 +346,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -318,9 +357,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -336,11 +374,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtn3er"
                 android:text="@string/strBtn3er"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -348,9 +385,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -360,9 +396,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -372,9 +407,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -390,11 +424,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtn4er"
                 android:text="@string/strBtn4er"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -402,9 +435,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -414,9 +446,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -426,9 +457,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -444,8 +474,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
-                android:contentDescription=""
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strBtnHouse"
                 android:src="@drawable/house" />
 
             <TextView
@@ -453,9 +483,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -465,9 +494,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -477,9 +505,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -495,8 +522,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
-                android:contentDescription=""
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strBtnSmallStreet"
                 android:src="@drawable/small_street" />
 
             <TextView
@@ -504,9 +531,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -516,9 +542,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -528,9 +553,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -546,8 +570,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
-                android:contentDescription=""
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strTxtLargeStreet"
                 android:src="@drawable/large_street" />
 
             <TextView
@@ -555,9 +579,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -567,9 +590,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -579,9 +601,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -597,8 +618,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
-                android:contentDescription=""
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strTxtChance"
                 android:src="@drawable/question" />
 
             <TextView
@@ -606,9 +627,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -618,9 +638,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -630,9 +649,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -648,10 +666,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
+                android:background="@color/colorMiddleYellow"
                 android:text="@string/strBtnKniffel"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -659,9 +676,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -671,9 +687,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -683,9 +698,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -701,11 +715,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/background_light"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -713,9 +724,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -725,9 +735,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
@@ -737,15 +746,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorBrightYellow"
-                android:contentDescription=""
-                android:text=""
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/colorDarkRed"
                 android:textStyle="bold" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 
@@ -758,9 +765,9 @@
         android:layout_marginStart="8dp"
         android:background="@color/colorMiddleYellow"
         android:contentDescription="@string/strBtnFinish"
+        android:src="@drawable/left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/left_arrow" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
@@ -770,7 +777,6 @@
         android:background="@color/colorMiddleYellow"
         android:text="@string/strBtnEndGame"
         android:textColor="@color/colorDarkRed"
-        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/img_v_avatar"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/astronaut"
         android:layout_marginTop="53dp"
         app:layout_constraintStart_toStartOf="@+id/spiAvatar"
