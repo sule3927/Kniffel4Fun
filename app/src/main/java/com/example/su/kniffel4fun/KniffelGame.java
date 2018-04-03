@@ -108,8 +108,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice1Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {1,2,2,3,5};
-                checkDice.checkNumber(1,testDice);
+                //int [] testDice = {1,2,2,3,5};
+                checkDice.checkNumber(1,PlayGame.getCurrTurn().getAllDice());
                 showScores();
 
             }
@@ -119,8 +119,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice2Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {1,2,2,3,5};
-                checkDice.checkNumber(2,testDice);
+                //int [] testDice = {1,2,2,3,5};
+                checkDice.checkNumber(2,PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -129,8 +129,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice3Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,3,5};
-                checkDice.checkNumber(3,testDice);
+                //int [] testDice = {2,2,2,3,5};
+                checkDice.checkNumber(3,PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -139,8 +139,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice4Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,3,4};
-                checkDice.checkNumber(4, testDice);
+               // int [] testDice = {2,2,2,3,4};
+                checkDice.checkNumber(4, PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -149,8 +149,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice5Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {4,4,2,3,5};
-                checkDice.checkNumber(5,testDice);
+                //int [] testDice = {4,4,2,3,5};
+                checkDice.checkNumber(5,PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -159,8 +159,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice6Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,6,6};
-                checkDice.checkNumber(6, testDice);
+                //int [] testDice = {2,2,2,6,6};
+                checkDice.checkNumber(6, PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -169,8 +169,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         tripletsBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,3,5};
-                checkDice.check3OfAKind(testDice);
+                //int [] testDice = {2,2,2,3,5};
+                checkDice.check3OfAKind(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -179,8 +179,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         allfoursBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,2,5};
-                checkDice.check4OfAKind(testDice);
+                //int [] testDice = {2,2,2,2,5};
+                checkDice.check4OfAKind(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -189,8 +189,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         houseBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,3,3};
-                checkDice.checkFullhouse(testDice);
+                //int [] testDice = {2,2,2,3,3};
+                checkDice.checkFullhouse(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -199,8 +199,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         smallStreetBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,3,3,4,5};
-                checkDice.checkSmallStraight(testDice);
+                //int [] testDice = {2,3,3,4,5};
+                checkDice.checkSmallStraight(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -209,8 +209,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         largeStreetBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {1,2,3,4,5};
-                checkDice.checkLargeStraight(testDice);
+                //int [] testDice = {1,2,3,4,5};
+                checkDice.checkLargeStraight(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -219,8 +219,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         chanceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                int [] testDice = {2,2,2,3,5};
-                checkDice.checkChance(testDice);
+                //int [] testDice = {2,2,2,3,5};
+                checkDice.checkChance(PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -314,7 +314,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 PlayGame.getCurrTurn().rollAllDice();
                 int[] allDice = PlayGame.getCurrTurn().getAllDice();
                 //testzwecke
-                Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
+               // Log.d("SENSO", "Würfel sind "+ allDice[0] + " , "+ allDice[1] + " , "+ allDice[2] + " , "+ allDice[3] + " , "+ allDice[4]);
                 KniffelGame.showDice(iviewDice1, allDice[0]);
                 KniffelGame.showDice(iviewDice2, allDice[1]);
                 KniffelGame.showDice(iviewDice3, allDice[2]);

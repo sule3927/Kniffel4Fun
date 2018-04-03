@@ -21,13 +21,16 @@ public class checkDice {
     public static void checkNumber(int number, int[] dice) {
         int i;
         int returnvalue = 0;
+        int sum = 0;
         for (i = 0; i < 5; i++) {
             if (dice[i] == number) {
                 returnvalue += 1;
+                sum = returnvalue*number;
             }
+            //else Streichen
         }
         int arrayIndex = number - 1;
-        PlayGame.getCurrPlayer().setPoints(1000, arrayIndex);
+        PlayGame.getCurrPlayer().setPoints(sum, arrayIndex);
     }
 
     /*

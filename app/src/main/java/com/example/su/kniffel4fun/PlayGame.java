@@ -54,8 +54,8 @@ public class PlayGame {
         Player player1 = new Player("Susann", 2131099732);
         Player player2 = new Player("Judith", 2131099758);
         setCurrPlayer(Player.allPlayers.get(0));
-        player1.setPoints(3, 0);
-        player2.setPoints(4, 0);
+        //player1.setPoints(3, 0);
+        //player2.setPoints(4, 0);
         //turn turn = new turn();
         //setCurrTurn(turn);
         return 12; /*dieser Returnwert wird nicht gebraucht, allerdings funktionierte die Methode nur, wenn ich einer Varaiblen den WErt zuweise*/
