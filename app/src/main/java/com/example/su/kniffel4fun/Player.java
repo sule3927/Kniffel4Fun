@@ -9,28 +9,43 @@ import java.util.ArrayList;
 public class Player {
        private String name = "";
        private int highscore = 0;
+       private int avatarID = 0;
        public int[] scores = new int[13];
        public static ArrayList<Player> allPlayers = new ArrayList<Player>();
 
        /*constructor*/
        public Player (String newName) {
-            name = newName;
+            this.name = newName;
             allPlayers.add(this);
         }
+
+    public Player (String newName, int avatarID) {
+        this.name = newName;
+        this.avatarID = avatarID;
+        allPlayers.add(this);
+    }
 
        /*methods*/
        public String getName() {
             return name;
         }
 
-       /*methos getPoints
-       * return int -> the points at the arraypostition
-       * param: Player and arrayIndex -> the position where the value is saved*/
+    public int getAvatarID() {
+        return avatarID;
+    }
+
+    public void setAvatarID(int avatarID) {
+        this.avatarID = avatarID;
+    }
+
+    /*methos getPoints
+               * return int -> the points at the arraypostition
+               * param: Player and arrayIndex -> the position where the value is saved*/
        public int getPoints(int arrayIndex){
           return this.scores[arrayIndex];
        }
 
-        public void setPoints(int points, int arrayIndex){
+       public void setPoints(int points, int arrayIndex){
             this.scores[arrayIndex] = points;
         }
 }

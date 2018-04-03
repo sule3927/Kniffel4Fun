@@ -2,6 +2,7 @@ package com.example.su.kniffel4fun;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 public class KniffelGame extends Activity implements View.OnClickListener {
 
     private TextView txtPlayer;
+    private ImageView iviewAvatar;
     private ImageButton dice1Btn;
     private TextView txtDice1;
     private ImageButton dice2Btn;
@@ -49,12 +51,14 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
 
+        iviewAvatar = (ImageView) findViewById(R.id.iviewAvatar) ;
+        iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
 
         txtDice1 = (TextView) findViewById(R.id.txtDice1);
         txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
-        //txtDice1.setText(PlayGame.getCurrPlayer().getName());
 
         dice2Btn = (ImageButton) findViewById(R.id.btnDice2);
         dice2Btn.setOnClickListener(this);
@@ -100,6 +104,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 PlayGame.changePlayer();
                 txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+                //iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                 txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
             }
         });
@@ -187,7 +192,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 KniffelGame.showDice(iviewDice3, allDice[2]);
                 KniffelGame.showDice(iviewDice4, allDice[3]);
                 KniffelGame.showDice(iviewDice5, allDice[4]);
-            }
+
+                }
         });
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
@@ -208,11 +214,16 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         if (clickedElementScore == R.id.btnScore) {
             Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
             startActivity(intent);
+
         }
     }
 
-    public static void showDice(ImageView dice, int pipes){
-        switch (pipes){
+    //MediaPlayer für den Würfel-Sound
+    //final MediaPlayer rollDiceSound;
+
+
+    public static void showDice(ImageView dice, int pipes) {
+        switch (pipes) {
             case 1:
                 dice.setImageResource(R.drawable.dice1);
                 break;
@@ -232,7 +243,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 dice.setImageResource(R.drawable.dice6);
                 break;
         }
-
-
     }
 }
+

@@ -3,7 +3,17 @@
     <string name="app_name">Kniffel4Fun</string>
     <string name="strBtnFinish">Beenden</string>
     <string name="strBtnStart">Los gehts ...</string>
-    <string name="strTxtHeader">WILLKOMMEN</string>
+    <string name="strTxtHeader">WILLKOMMEN ZU KNIFFEL FOR FUN</string>
+    <string name="strTxtPlayerWelcome">Gebe deinen Namen ein</string>
+    <string name="strViewAstronaut">Astronaut</string>
+    <string name="strViewThief">Dieb</string>
+    <string name="strViewMario">Mario</string>
+    <string name="strViewDice1">1. Wuerfel</string>
+    <string name="strViewDice2">2. Wuerfel</string>
+    <string name="strViewDice3">3. Wuerfel</string>
+    <string name="strViewDice4">4. Wuerfel</string>
+    <string name="strViewDice5">5. Wuerfel</string>
+    <string name="strTxtChooseAvatar">Wähle deinen Avatar</string>
     <string name="strTxtScore">Score</string>
     <string name="strBtnBack">Zurueck</string>
     <string name="strBtnDice1">Wuerfel 1</string>
@@ -12,6 +22,10 @@
     <string name="strBtnDice4">Wuerfel 4</string>
     <string name="strBtnDice5">Wuerfel 5</string>
     <string name="strBtnDice6">Wuerfel 6</string>
+    <string name="strBtnHouse">Haus</string>
+    <string name="strBtnSmallStreet">Kleine Strasse</string>
+    <string name="strLargeStreet">Grosse Strasse</string>
+    <string name="strBtnChance">Chance</string>
     <string name="strTxtDice1">111</string>
     <string name="strTxtDice2">222</string>
     <string name="strTxtDice3">333</string>
@@ -27,10 +41,11 @@
     <string name="strBtn3er">3er</string>
     <string name="strBtn4er">4er</string>
     <string name="strBtnKniffel">KNIFFEL +50</string>
-    <string name="strBtnRollDice">Wuerfeln</string>
-    <string name="strBtnScore">Score</string>
+    <string name="strBtnRollDice">WUERFELN</string>
+    <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Beenden</string>
     <string name="strTxtBye">Auf Wiedersehen, bis bald!</string>
+    <string name="strBtnNewPalyer">OK</string>
 
 
 

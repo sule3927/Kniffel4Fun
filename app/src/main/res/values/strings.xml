@@ -2,7 +2,17 @@
     <string name="app_name">Yatzi4Fun</string>
     <string name="strBtnFinish">Exit</string>
     <string name="strBtnStart">Lets go ...</string>
-    <string name="strTxtHeader">WELCOME</string>
+    <string name="strTxtHeader">WELCOME TO YATZI FOR FUN</string>
+    <string name="strTxtPlayerWelcome">Input your Name</string>
+    <string name="strViewAstronaut">Astronaut</string>
+    <string name="strViewThief">Thief</string>
+    <string name="strViewMario">Mario</string>
+    <string name="strViewDice1">1. Dice</string>
+    <string name="strViewDice2">2. Dice</string>
+    <string name="strViewDice3">3. Dice</string>
+    <string name="strViewDice4">4. Dice</string>
+    <string name="strViewDice5">5. Dice</string>
+    <string name="strTxtChooseAvatar">Choose your Avatar</string>
     <string name="strTxtScore">Score</string>
     <string name="strBtnBack">Go back</string>
     <string name="strBtnDice1">Dice 1</string>
@@ -11,6 +21,10 @@
     <string name="strBtnDice4">Dice 4</string>
     <string name="strBtnDice5">Dice 5</string>
     <string name="strBtnDice6">Dice 6</string>
+    <string name="strBtnHouse">House</string>
+    <string name="strBtnSmallStreet">Small Street</string>
+    <string name="strLargeStreet">Large Street</string>
+    <string name="strBtnChance">Chance</string>
     <string name="strTxtDice1">111</string>
     <string name="strTxtDice2">222</string>
     <string name="strTxtDice3">333</string>
@@ -27,9 +41,10 @@
     <string name="strBtn4er">4er</string>
     <string name="strBtnKniffel">KNIFFEL +50</string>
     <string name="strBtnRollDice">Roll the Dice</string>
-    <string name="strBtnScore">Score</string>
+    <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Quit Game</string>
     <string name="strTxtBye">Bye, bye, see you!</string>
+    <string name="strBtnNewPalyer">OK</string>
 
 
 </resources>
