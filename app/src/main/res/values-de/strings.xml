@@ -45,7 +45,7 @@
     <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Beenden</string>
     <string name="strTxtBye">Auf Wiedersehen, bis bald!</string>
-    <string name="strBtnNewPalyer">OK</string>
+    <string name="strBtnNewPlayer">OK</string>
     <string name="strDialogTitle">Soll eine 0 eingetragen werden?</string>
     <string name="strDialogOK">Ja</string>
     <string name="strDialogReturn">Zurück</string>
