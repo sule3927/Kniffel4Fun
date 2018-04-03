@@ -46,6 +46,11 @@
     <string name="strTxtBye">Bye, bye, see you!</string>
     <string name="strPlayerCreated"> was created</string>
     <string name="strBtnNewPalyer">OK</string>
+    <string name="strDialogTitle">Do you like to set this score 0?</string>
+    <string name="strDialogOK">Yes</string>
+    <string name="strDialogReturn">Return</string>
+
+
 
 
 </resources>

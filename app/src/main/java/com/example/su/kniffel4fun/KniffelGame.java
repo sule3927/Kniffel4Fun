@@ -1,6 +1,8 @@
 package com.example.su.kniffel4fun;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -235,7 +237,9 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 //txtPlayer.setText(PlayGame.getCurrPlayer().getName());
                 //iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                 //showScores();
-                nextPlayer();}
+                nextPlayer();
+                //setScoreNull(2);
+            }
         });
 
         iviewDice1 = (ImageView) findViewById(R.id.iviewDice1);
@@ -322,7 +326,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 KniffelGame.showDice(iviewDice4, allDice[3]);
                 KniffelGame.showDice(iviewDice5, allDice[4]);
 
-                }
+            }
         });
 
         backBtn = (ImageButton) findViewById(R.id.btnBack);
@@ -348,10 +352,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         if (clickedElementScore == R.id.btnScore) {
             Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
             startActivity(intent);
+
         }
     }
 
-    public void showScores()  {
+    public void showScores() {
         txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
         txtDice2.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(1)));
         txtDice3.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(2)));
@@ -392,7 +397,84 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 dice.setImageResource(R.drawable.dice6);
                 break;
         }
-
-
     }
+
+
+    public void setScoreNull(final int choice) {
+        android.support.v7.app.AlertDialog.Builder alertDialog = new android.support.v7.app.AlertDialog.Builder(this);
+        alertDialog.setMessage(getString(R.string.strDialogTitle));
+        //Positive Button
+        alertDialog.setPositiveButton(getString(R.string.strDialogReturn), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        //Negative Button
+        alertDialog.setNegativeButton(getString(R.string.strDialogOK), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (choice) {
+                    case 1:
+                        PlayGame.getCurrPlayer().setPoints(0, 0);
+                        showScores();
+                        break;
+                    case 2:
+                        PlayGame.getCurrPlayer().setPoints(800, 1);
+                        showScores();
+                        break;
+                    case 3:
+                        PlayGame.getCurrPlayer().setPoints(0, 2);
+                        showScores();
+                        break;
+                    case 4:
+                        PlayGame.getCurrPlayer().setPoints(0, 3);
+                        showScores();
+                        break;
+                    case 5:
+                        PlayGame.getCurrPlayer().setPoints(0, 4);
+                        showScores();
+                        break;
+                    case 6:
+                        PlayGame.getCurrPlayer().setPoints(0, 5);
+                        showScores();
+                        break;
+                    case 7:
+                        PlayGame.getCurrPlayer().setPoints(0, 6);
+                        showScores();
+                        break;
+                    case 8:
+                        PlayGame.getCurrPlayer().setPoints(0, 7);
+                        showScores();
+                        break;
+                    case 9:
+                        PlayGame.getCurrPlayer().setPoints(0, 8);
+                        showScores();
+                        break;
+                    case 10:
+                        PlayGame.getCurrPlayer().setPoints(0, 9);
+                        showScores();
+                        break;
+                    case 11:
+                        PlayGame.getCurrPlayer().setPoints(0, 10);
+                        showScores();
+                        break;
+                    case 12:
+                        PlayGame.getCurrPlayer().setPoints(0, 11);
+                        showScores();
+                        break;
+            }
+            }
+        });
+
+        //create alert dialog
+        alertDialog.create();
+
+        //show alert dialog
+        alertDialog.show();
+    }
+
+
 }
+
