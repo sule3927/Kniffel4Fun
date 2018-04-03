@@ -1,0 +1,12 @@
+<ImageView
+                    android:id="@+id/iviewPodium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@color/colorMiddleYellow"
+                    android:padding="8dp"
+                    android:src="@drawable/podium" />
