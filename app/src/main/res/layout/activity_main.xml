@@ -134,18 +134,12 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:popupBackground="@color/colorMiddleYellow"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnNewPlayer"
@@ -157,38 +151,45 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:text="@string/strBtnNewPalyer"
-                android:textColor="@color/colorPrimary"
+                android:layout_weight="0.5"
+                android:background="@color/colorBrightYellow"
+                android:text="@string/strBtnNewPlayer"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spiAvatar"
-                app:layout_constraintVertical_bias="0.529" />
+                app:layout_constraintTop_toBottomOf="@+id/spiAvatar" />
+
+
+
         </LinearLayout>
+
+
 
     </LinearLayout>
 
 
-
-        <ImageButton
-            android:id="@+id/ibtnFinish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:background="@color/colorMiddleYellow"
-            android:contentDescription="@string/strBtnFinish"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/left_arrow" />
+    <ImageButton
+        android:id="@+id/ibtnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/colorMiddleYellow"
+        android:contentDescription="@string/strBtnFinish"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorMiddleYellow"
+        android:padding="8dp"
         android:text="@string/strBtnStart"
         android:textColor="@color/colorDarkRed"
         android:textStyle="bold"

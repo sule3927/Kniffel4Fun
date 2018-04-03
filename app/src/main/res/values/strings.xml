@@ -3,7 +3,7 @@
     <string name="strBtnFinish">Exit</string>
     <string name="strBtnStart">Lets go ...</string>
     <string name="strTxtHeader">WELCOME TO YATZI FOR FUN</string>
-    <string name="strTxtPlayerWelcome">Input your Name</string>
+    <string name="strTxtPlayerWelcome">Enter your Name</string>
     <string name="strViewAstronaut">Astronaut</string>
     <string name="strViewThief">Thief</string>
     <string name="strViewMario">Mario</string>
@@ -44,7 +44,7 @@
     <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Quit Game</string>
     <string name="strTxtBye">Bye, bye, see you!</string>
-    <string name="strBtnNewPalyer">OK</string>
+    <string name="strBtnNewPlayer">OK</string>
     <string name="strDialogTitle">Do you like to set this score 0?</string>
     <string name="strDialogOK">Yes</string>
     <string name="strDialogReturn">Return</string>
