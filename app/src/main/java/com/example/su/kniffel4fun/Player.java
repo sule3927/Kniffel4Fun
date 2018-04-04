@@ -19,7 +19,6 @@ public class Player {
        public Player (String newName) {
             this.name = newName;
             allPlayers.add(this);
-            numberOfPlayer++;
         }
 
     public Player (String newName, int avatarID) {
@@ -33,7 +32,6 @@ public class Player {
             return name;
         }
 
-    public static int getNumberOfPlayer(){return numberOfPlayer;}
 
     public int getAvatarID() {
         return avatarID;

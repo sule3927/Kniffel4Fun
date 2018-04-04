@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 /**
@@ -14,75 +15,74 @@ import android.widget.ImageButton;
 
 public class ScoreGame extends Activity implements View.OnClickListener {
 
-    private ImageButton dice1Btn;
-    private ImageButton dice2Btn;
-    private ImageButton dice3Btn;
-    private ImageButton dice4Btn;
-    private ImageButton dice5Btn;
-    private ImageButton dice6Btn;
-    private Button tripletsBtn;
-    private Button allfoursBtn;
-    private ImageButton houseBtn;
-    private ImageButton smallStreetBtn;
-    private ImageButton largeStreetBtn;
-    private ImageButton chanceBtn;
-    private Button kniffelBtn;
-    private Button endGameBtn;
-    private ImageButton finishBtn;
+    private TextView txtPlayer1UpperSection;
+    private TextView txtPlayer1LowerSection;
+    private TextView txtPlayer1Yatzy;
+    private TextView txtPlayer1Bonus;
+    private TextView txtPlayer1ScoreAll;
+    private TextView txtPlayer2UpperSection;
+    private TextView txtPlayer2LowerSection;
+    private TextView txtPlayer2Yatzy;
+    private TextView txtPlayer2Bonus;
+    private TextView txtPlayer2ScoreAll;
+    private TextView txtPlayer3UpperSection;
+    private TextView txtPlayer3LowerSection;
+    private TextView txtPlayer3Yatzy;
+    private TextView txtPlayer3Bonus;
+    private TextView txtPlayer3ScoreAll;
 
-
-
+    public void setResults(){
+        int thisPlayer = 0;
+        while ( thisPlayer <Player.allPlayers.size()) {
+            Player nextPlayer = Player.allPlayers.get(thisPlayer);
+            PlayGame.setCurrPlayer(nextPlayer);
+            switch (thisPlayer){
+                case 0:
+                    txtPlayer1UpperSection = (TextView) findViewById(R.id.txtPlayer1UpperSection);
+                    txtPlayer1UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
+                    txtPlayer1LowerSection = (TextView) findViewById(R.id.txtPlayer1LowerSection);
+                    txtPlayer1LowerSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(2)));
+                    txtPlayer1Yatzy = (TextView) findViewById(R.id.txtPlayer1Yatzy);
+                    txtPlayer1Yatzy.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(3)));
+                    txtPlayer1Bonus = (TextView) findViewById(R.id.txtPlayer1Bonus);
+                    txtPlayer1Bonus.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(1)));
+                    txtPlayer1ScoreAll = (TextView) findViewById(R.id.txtPlayer1ScoreAll);
+                    txtPlayer1ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
+                    break;
+                case 1:
+                    txtPlayer2UpperSection = (TextView) findViewById(R.id.txtPlayer2UpperSection);
+                    txtPlayer2UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
+                    txtPlayer2LowerSection = (TextView) findViewById(R.id.txtPlayer2LowerSection);
+                    txtPlayer2LowerSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(2)));
+                    txtPlayer2Yatzy = (TextView) findViewById(R.id.txtPlayer2Yatzy);
+                    txtPlayer2Yatzy.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(3)));
+                    txtPlayer2Bonus = (TextView) findViewById(R.id.txtPlayer2Bonus);
+                    txtPlayer2Bonus.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(1)));
+                    txtPlayer2ScoreAll = (TextView) findViewById(R.id.txtPlayer2ScoreAll);
+                    txtPlayer2ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
+                    break;
+                case 2:
+                    txtPlayer3UpperSection = (TextView) findViewById(R.id.txtPlayer3UpperSection);
+                    txtPlayer3UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
+                    txtPlayer3LowerSection = (TextView) findViewById(R.id.txtPlayer3LowerSection);
+                    txtPlayer3LowerSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(2)));
+                    txtPlayer3Yatzy = (TextView) findViewById(R.id.txtPlayer3Yatzy);
+                    txtPlayer3Yatzy.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(3)));
+                    txtPlayer3Bonus = (TextView) findViewById(R.id.txtPlayer3Bonus);
+                    txtPlayer3Bonus.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(1)));
+                    txtPlayer3ScoreAll = (TextView) findViewById(R.id.txtPlayer3ScoreAll);
+                    txtPlayer3ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
+                    break;
+            }
+            thisPlayer++;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score_game);
-
-        dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
-        dice1Btn.setOnClickListener(this);
-
-        dice2Btn = (ImageButton) findViewById(R.id.btnDice2);
-        dice2Btn.setOnClickListener(this);
-
-        dice3Btn = (ImageButton) findViewById(R.id.btnDice3);
-        dice3Btn.setOnClickListener(this);
-
-        dice4Btn = (ImageButton) findViewById(R.id.btnDice4);
-        dice4Btn.setOnClickListener(this);
-
-        dice5Btn = (ImageButton) findViewById(R.id.btnDice5);
-        dice5Btn.setOnClickListener(this);
-
-        dice6Btn = (ImageButton) findViewById(R.id.btnDice6);
-        dice6Btn.setOnClickListener(this);
-
-        tripletsBtn = (Button) findViewById(R.id.btn3er);
-        tripletsBtn.setOnClickListener(this);
-
-        allfoursBtn = (Button) findViewById(R.id.btn4er);
-        allfoursBtn.setOnClickListener(this);
-
-        houseBtn = (ImageButton) findViewById(R.id.btnHouse);
-        houseBtn.setOnClickListener(this);
-
-        smallStreetBtn = (ImageButton) findViewById(R.id.btnSmallStreet);
-        smallStreetBtn.setOnClickListener(this);
-
-        largeStreetBtn = (ImageButton) findViewById(R.id.btnLargeStreet);
-        largeStreetBtn.setOnClickListener(this);
-
-        chanceBtn = (ImageButton) findViewById(R.id.btnChance);
-        chanceBtn.setOnClickListener(this);
-
-        kniffelBtn = (Button) findViewById(R.id.btnKniffel);
-        kniffelBtn.setOnClickListener(this);
-
-        endGameBtn = (Button) findViewById(R.id.btnEndGame);
-        endGameBtn.setOnClickListener(this);
-
-        finishBtn = (ImageButton) findViewById(R.id.ibtnFinish);
-        finishBtn.setOnClickListener(this);
-
+        setResults();
     }
 
 
