@@ -7,14 +7,16 @@
 
     <LinearLayout
         android:id="@+id/LayoutScore"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ibtnFinish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -31,7 +33,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="8dp"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
                 android:padding="8dp"
                 android:src="@drawable/podium" />
@@ -80,78 +82,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/btnDice1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice1"
-                android:paddingBottom="8dp"
-                android:src="@drawable/dice1" />
-
-            <TextView
-                android:id="@+id/txtPlayer1ScoreDice1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingBottom="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2ScoreDice1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingBottom="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3ScoreDice1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingBottom="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnDice2"
+            <Button
+                android:id="@+id/btnUpperSection"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice2"
-                android:src="@drawable/dice2" />
+                android:contentDescription="@string/strViewUpperSection"
+                android:text="@string/strViewUpperSection"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer1Dice2"
+                android:id="@+id/txtPlayer1UpperSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -162,7 +105,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer2Dice2"
+                android:id="@+id/txtPlayer2UpperSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -173,199 +116,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer3Dice2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnDice3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice3"
-                android:src="@drawable/dice3" />
-
-            <TextView
-                android:id="@+id/txtPlayer1Dice3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2Dice3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3Dice3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnDice4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice4"
-                android:src="@drawable/dice4" />
-
-            <TextView
-                android:id="@+id/txtPlayer1Dice4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2Dice4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3Dice4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnDice5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice5"
-                android:src="@drawable/dice5" />
-
-            <TextView
-                android:id="@+id/txtPlayer1Dice5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2Dice5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3Dice5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnDice6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnDice6"
-                android:src="@drawable/dice6" />
-
-            <TextView
-                android:id="@+id/txtPlayer1Dice6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2Dice6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3Dice6"
+                android:id="@+id/txtPlayer3UpperSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -382,18 +133,18 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btn3er"
+                android:id="@+id/btnLowerSection"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtn3er"
-                android:text="@string/strBtn3er"
+                android:contentDescription="@string/strViewLowerSection"
+                android:text="@string/strViewLowerSection"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer1_3er"
+                android:id="@+id/txtPlayer1LowerSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -404,7 +155,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer2_3er"
+                android:id="@+id/txtPlayer2LowerSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -415,7 +166,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer3_3er"
+                android:id="@+id/txtPlayer3LowerSection"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -432,18 +183,17 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btn4er"
+                android:id="@+id/btnYatzy"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtn4er"
-                android:text="@string/strBtn4er"
+                android:text="@string/strViewYatzy"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer1_4er"
+                android:id="@+id/txtPlayer1Yatzy"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -454,7 +204,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer2_4er"
+                android:id="@+id/txtPlayer2Yatzy"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -465,199 +215,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer3_5er"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnHouse"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnHouse"
-                android:src="@drawable/house" />
-
-            <TextView
-                android:id="@+id/txtPlayer1House"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2House"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3House"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnSmallStreet"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strBtnSmallStreet"
-                android:src="@drawable/small_street" />
-
-            <TextView
-                android:id="@+id/txtPlayer1SmallStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2SmallStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3SmallStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnLargeStreet"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strTxtLargeStreet"
-                android:src="@drawable/large_street" />
-
-            <TextView
-                android:id="@+id/txtPlayer1LargeStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2LargeStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3LargeStreet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnChance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:contentDescription="@string/strTxtChance"
-                android:src="@drawable/question" />
-
-            <TextView
-                android:id="@+id/txtPlayer1Chance"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer2Chance"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorMiddleYellow"
-                android:gravity="center_vertical|center_horizontal"
-                android:textAlignment="center"
-                android:textColor="@color/colorDarkRed"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtPlayer3Chance"
+                android:id="@+id/txtPlayer3Yatzy"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -674,17 +232,17 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btnKniffel"
+                android:id="@+id/btnBonus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
-                android:text="@string/strBtnKniffel"
+                android:text="@string/strViewBonus"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer1Kniffel"
+                android:id="@+id/txtPlayer1Bonus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -695,7 +253,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer2Kniffel"
+                android:id="@+id/txtPlayer2Bonus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -706,7 +264,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer3Kniffel"
+                android:id="@+id/txtPlayer3Bonus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -728,6 +286,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
+                android:text="@string/strViewScoreAll"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
@@ -743,7 +302,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPlayer2ScoreAll"
+                android:id="@+id/txtPlayer3ScoreAll"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

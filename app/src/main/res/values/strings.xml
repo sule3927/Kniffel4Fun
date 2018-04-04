@@ -49,6 +49,15 @@
     <string name="strDialogTitle">Do you like to set this score 0?</string>
     <string name="strDialogOK">Yes</string>
     <string name="strDialogReturn">Return</string>
+    <string name="strViewUpperSection">Upper Section</string>
+    <string name="strViewLowerSection">Lower Section</string>
+    <string name="strViewBonus">Bonus</string>
+    <string name="strViewYatzy">Yatzy</string>
+    <string name="strViewScoreAll">Total</string>
+
+
+
+
 
 
 
