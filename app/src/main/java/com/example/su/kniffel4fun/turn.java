@@ -12,6 +12,7 @@ public class turn {
     private dice dice5 = new dice();
     private int[] allDice;
     private int countRolls;
+    private boolean scored = false;
 
     //constructor
     public turn() {
@@ -71,6 +72,14 @@ public class turn {
         int pipesDice5 = dice5.getPipes();
         int[] allDice = {pipesDice1,pipesDice2,pipesDice3,pipesDice4,pipesDice5};
         this.allDice = allDice;
+    }
+
+    public boolean isScored() {
+        return scored;
+    }
+
+    public void setScored(boolean scored) {
+        this.scored = scored;
     }
 
     public int getCountRolls() {

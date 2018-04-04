@@ -35,33 +35,21 @@ public class PlayGame {
         PlayGame.currTurn = currTurn;
     }
 
-    public static void changePlayer(){
-        if (countRounds <= 13){
-        turn nextTurn = new turn();
-        setCurrTurn(nextTurn);
-        Player currPlayer = PlayGame.getCurrPlayer();
-        int indexNext = 1+Player.allPlayers.indexOf(currPlayer);
-        //wenn Ende des Array erreicht, fange von vorne an
-        if (indexNext == Player.allPlayers.size()){
-            indexNext = 0;
-            PlayGame.countRounds++;
+    public static void changePlayer() {
+        if (countRounds <= 13) {
+            turn nextTurn = new turn();
+            setCurrTurn(nextTurn);
+            Player currPlayer = PlayGame.getCurrPlayer();
+            int indexNext = 1 + Player.allPlayers.indexOf(currPlayer);
+            //wenn Ende des Array erreicht, fange von vorne an
+            if (indexNext == Player.allPlayers.size()) {
+                indexNext = 0;
+                PlayGame.countRounds++;
+            }
+            Player nextPlayer = Player.allPlayers.get(indexNext);
+            PlayGame.setCurrPlayer(nextPlayer);
         }
-        Player nextPlayer = Player.allPlayers.get(indexNext);
-        PlayGame.setCurrPlayer(nextPlayer);
-        }
-
-    /*this method creates two players for test purposes*/
-    public int testPlayer() {
-        Player player1 = new Player("Susann", 2131099732);
-        Player player2 = new Player("Judith", 2131099758);
-        setCurrPlayer(Player.allPlayers.get(0));
-        //player1.setPoints(3, 0);
-        //player2.setPoints(4, 0);
-        //turn turn = new turn();
-        //setCurrTurn(turn);
-        return 12; /*dieser Returnwert wird nicht gebraucht, allerdings funktionierte die Methode nur, wenn ich einer Varaiblen den WErt zuweise*/
     }
-
 
     public static void calculateResult(){
             turn turn = new turn();

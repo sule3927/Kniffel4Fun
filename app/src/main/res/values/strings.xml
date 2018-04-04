@@ -46,7 +46,7 @@
     <string name="strBtnEndGame">Quit Game</string>
     <string name="strTxtBye">Bye, bye, see you!</string>
     <string name="strBtnNewPlayer">OK</string>
-    <string name="strPlayerCreated"> was created</string>
+    <string name="strPlayerCreated"> is playing</string>
     <string name="strDialogTitle">Do you like to set this score 0?</string>
     <string name="strDialogOK">Yes</string>
     <string name="strDialogReturn">Return</string>

@@ -49,6 +49,7 @@
     <string name="strBtnNewPlayer">OK</string>
     <string name="strDialogTitle">Soll eine 0 eingetragen werden?</string>
     <string name="strDialogOK">Ja</string>
+    <string name="strPlayerCreated"> spielt mit</string>
     <string name="strDialogReturn">Zurück</string>
     <string name="strViewUpperSection">Oberer Bereich</string>
     <string name="strViewLowerSection">Unterer Bereich</string>
