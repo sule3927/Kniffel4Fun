@@ -458,25 +458,28 @@
     </LinearLayout>
 
 
-
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/colorMiddleYellow"
         android:contentDescription="@string/strBtnBack"
+        android:padding="8dp"
+        android:src="@drawable/left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/left_arrow" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
         android:background="@color/colorMiddleYellow"
+        android:padding="8dp"
         android:text="@string/strTxtNxtPlayer"
         android:textColor="@color/colorDarkRed"
         android:textStyle="bold"
