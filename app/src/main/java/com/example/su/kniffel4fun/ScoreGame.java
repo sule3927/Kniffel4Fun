@@ -85,19 +85,15 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         setResults();
     }
 
-
-
     @Override
     public void onClick(View view) {
 
         finish();
-
-        int clickedElementEnd = view.getId();
-
-        if (clickedElementEnd == R.id.btnEndGame) {
-            Intent intent = new Intent(ScoreGame.this, EndGame.class);
-            startActivity(intent);
         }
 
-    }
-}
+
+    public void OnButtonClick(View view) {
+
+        System.exit(0);
+
+    }}

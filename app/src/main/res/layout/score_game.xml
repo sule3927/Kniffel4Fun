@@ -338,14 +338,18 @@
         android:padding="8dp"
         android:src="@drawable/left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" />
 
 
     <Button
         android:id="@+id/btnEndGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
         android:background="@color/colorMiddleYellow"
+        android:onClick="OnButtonClick"
         android:padding="8dp"
         android:text="@string/strBtnEndGame"
         android:textColor="@color/colorDarkRed"
