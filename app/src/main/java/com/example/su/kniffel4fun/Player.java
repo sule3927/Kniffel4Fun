@@ -34,7 +34,6 @@ public class Player {
             return name;
         }
 
-    public static int getNumberOfPlayer(){return numberOfPlayer;}
 
     public int getAvatarID() {
         return avatarID;

@@ -385,6 +385,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 if (getText(R.string.strBtnScore) == scoreBtn.getText()) {
+                    PlayGame.nextResult();
                     Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
                     startActivity(intent);
                     return;
