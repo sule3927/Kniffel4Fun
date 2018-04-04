@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,10 +59,18 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private ImageButton backBtn;
     private Button scoreBtn;
 
+    int rollingDice;
+    SoundPool player;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
+
+        player=new SoundPool(10,AudioManager.STREAM_MUSIC,0);
+        rollingDice = player.load(this,R.raw.dice_roll,1);
 
         txtPlayer = (TextView) findViewById(R.id.txtPlayer);
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
@@ -315,6 +325,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                player.play(rollingDice, 1, 1, 1, 0, 1);
                 PlayGame.getCurrTurn().rollAllDice();
                 int[] allDice = PlayGame.getCurrTurn().getAllDice();
                 //testzwecke
@@ -473,6 +484,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         //show alert dialog
         alertDialog.show();
     }
+
 
 
 }
