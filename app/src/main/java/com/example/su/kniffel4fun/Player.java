@@ -11,6 +11,7 @@ public class Player {
        private int highscore = 0;
        private int avatarID = 0;
        public int[] scores = new int[13];
+       public int [] finalScore = new int[5];
        public static ArrayList<Player> allPlayers = new ArrayList<Player>();
 
        /*constructor*/
@@ -42,9 +43,19 @@ public class Player {
                * return int -> the points at the arraypostition
                * param: Player and arrayIndex -> the position where the value is saved*/
        public int getPoints(int arrayIndex){
-          return this.scores[arrayIndex];
-       }
+        return this.scores[arrayIndex];
+    }
 
-       public void setPoints(int points, int arrayIndex){
-           this.scores[arrayIndex] = points;      }
+    public void setPoints(int points, int arrayIndex){
+        this.scores[arrayIndex] = points;      }
+
+
+    /*methods finalScore*/
+
+    public int getFinalScore(int arrayIndex){
+        return this.finalScore[arrayIndex];
+    }
+
+    public void setFinalScore(int finalPoints, int arrayIndex){
+        this.finalScore[arrayIndex] = finalPoints;      }
 }

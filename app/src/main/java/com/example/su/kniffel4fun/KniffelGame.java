@@ -347,9 +347,14 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     }
 
     public void nextPlayer() {
-        PlayGame.changePlayer();
-        txtPlayer.setText(PlayGame.getCurrPlayer().getName());
-        showScores();
+        if (PlayGame.getCountRounds()<=12) {
+            PlayGame.changePlayer();
+            txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+            showScores();
+        }
+        else {
+            endGame();
+        }
     }
 
     @Override
@@ -485,7 +490,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         alertDialog.show();
     }
 
-
+    public void endGame(){
+        PlayGame.calculateResult();
+        Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
+        startActivity(intent);
+    }
 
 }
 
