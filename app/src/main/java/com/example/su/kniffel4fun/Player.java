@@ -13,11 +13,13 @@ public class Player {
        public int[] scores = new int[13];
        public int [] finalScore = new int[5];
        public static ArrayList<Player> allPlayers = new ArrayList<Player>();
+       private static int numberOfPlayer;
 
        /*constructor*/
        public Player (String newName) {
             this.name = newName;
             allPlayers.add(this);
+            numberOfPlayer++;
         }
 
     public Player (String newName, int avatarID) {
@@ -30,6 +32,8 @@ public class Player {
        public String getName() {
             return name;
         }
+
+    public static int getNumberOfPlayer(){return numberOfPlayer;}
 
     public int getAvatarID() {
         return avatarID;

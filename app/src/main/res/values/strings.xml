@@ -14,6 +14,7 @@
     <string name="strViewDice5">5. Dice</string>
     <string name="strTxtChooseAvatar">Choose your Avatar</string>
     <string name="strTxtScore">Score</string>
+    <string name="strTxtNxtPlayer">Next Player</string>
     <string name="strBtnBack">Go back</string>
     <string name="strBtnDice1">Dice 1</string>
     <string name="strBtnDice2">Dice 2</string>
