@@ -14,6 +14,7 @@
     <string name="strViewDice5">5. Dice</string>
     <string name="strTxtChooseAvatar">Choose your Avatar</string>
     <string name="strTxtScore">Score</string>
+    <string name="strTxtNxtPlayer">Next Player</string>
     <string name="strBtnBack">Go back</string>
     <string name="strBtnDice1">Dice 1</string>
     <string name="strBtnDice2">Dice 2</string>
@@ -49,6 +50,16 @@
     <string name="strDialogTitle">Do you like to set this score 0?</string>
     <string name="strDialogOK">Yes</string>
     <string name="strDialogReturn">Return</string>
+    <string name="strViewUpperSection">Upper Section</string>
+    <string name="strViewLowerSection">Lower Section</string>
+    <string name="strViewBonus">Bonus</string>
+    <string name="strViewYatzy">Yatzy</string>
+    <string name="strViewScoreAll">Total</string>
+    <string name="strBtnInfo">Info</string>
+
+
+
+
 
 
 

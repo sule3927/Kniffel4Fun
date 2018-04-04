@@ -15,6 +15,7 @@
     <string name="strViewDice5">5. Wuerfel</string>
     <string name="strTxtChooseAvatar">Wähle deinen Avatar</string>
     <string name="strTxtScore">Score</string>
+    <string name="strTxtNxtPlayer">Weiter</string>
     <string name="strBtnBack">Zurueck</string>
     <string name="strBtnDice1">Wuerfel 1</string>
     <string name="strBtnDice2">Wuerfel 2</string>
@@ -49,6 +50,14 @@
     <string name="strDialogTitle">Soll eine 0 eingetragen werden?</string>
     <string name="strDialogOK">Ja</string>
     <string name="strDialogReturn">Zurück</string>
+    <string name="strViewUpperSection">Oberer Bereich</string>
+    <string name="strViewLowerSection">Unterer Bereich</string>
+    <string name="strViewBonus">Bonus</string>
+    <string name="strViewYatzy">Kniffel</string>
+    <string name="strViewScoreAll">Gesamt</string>
+    <string name="strBtnInfo">Info</string>
+
+
 
 
 

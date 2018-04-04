@@ -4,6 +4,8 @@ package com.example.su.kniffel4fun;
  * Created by judith on 06.03.2018.
  */
 
+import android.util.Log;
+
 public class PlayGame {
     private static Player currPlayer;
     private static turn currTurn;
@@ -14,6 +16,8 @@ public class PlayGame {
         setCurrTurn(turn);
         setCurrPlayer(Player.allPlayers.get(0));
     }
+
+    public static int getCountRounds () {return countRounds; }
 
     public static Player getCurrPlayer() {
         return currPlayer;
@@ -45,10 +49,6 @@ public class PlayGame {
         Player nextPlayer = Player.allPlayers.get(indexNext);
         PlayGame.setCurrPlayer(nextPlayer);
         }
-        else {
-            //Spiel beenden
-        }
-    }
 
     /*this method creates two players for test purposes*/
     public int testPlayer() {
@@ -61,35 +61,29 @@ public class PlayGame {
         //setCurrTurn(turn);
         return 12; /*dieser Returnwert wird nicht gebraucht, allerdings funktionierte die Methode nur, wenn ich einer Varaiblen den WErt zuweise*/
     }
-    
-    public void rollThisDice () {
-        //nicht ausgewählte Würfel würfeln
-    }
-
-    public void pickDice () {
-        //Würfel auswählen
-    }
-
-    public void setScoreNull (){
-        // alertDialog "Möchtest du den ... streichen?"
-    }
 
 
-    int[] scores = {4,8,6,12,15,12,19,0,25,30,0,50,24};
-
-    public int calculateResult () {
-        int sumTotal = 0;
-
-        for (int i : scores) {
-            sumTotal += i;
+    public static void calculateResult(){
+            turn turn = new turn();
+            setCurrTurn(turn);
+            Player currPlayer = PlayGame.getCurrPlayer();
+            int [] scores = currPlayer.scores;
+            int sumTop = scores[0]+scores[1]+scores[2]+scores[3]+scores[4]+scores[5];
+            currPlayer.finalScore[1] = sumTop;
+            int sumBottom = scores[6]+scores[7]+scores[8]+scores[9]+scores[10]+scores[12];
+            currPlayer.finalScore[2] = sumBottom;
+            if (sumTop>=63) {
+                currPlayer.finalScore[1] = 35;
+            }
+            else {
+                currPlayer.finalScore[1] = 0;
+            }
+            currPlayer.finalScore[3] = scores[11];
+            currPlayer.finalScore[4] = currPlayer.finalScore[0] +currPlayer.finalScore[1]+currPlayer.finalScore[2]+currPlayer.finalScore[3];
+            Log.d("SENSO", getCurrPlayer()+ " oben" +currPlayer.finalScore[0] + " bonus "+ currPlayer.finalScore[1] + " unten "+ currPlayer.finalScore[2] + " Kniffel "+ currPlayer.finalScore[3] + " Total "+ currPlayer.finalScore[4]);
+            int indexNext = 1+Player.allPlayers.indexOf(currPlayer);
+            Player nextPlayer = Player.allPlayers.get(indexNext);
+            PlayGame.setCurrPlayer(nextPlayer);
+            calculateResult();
         }
-
-        int sumTop = scores[0]+scores[1]+scores[2]+scores[3]+scores[4]+scores[5];
-
-        if (sumTop>=63){
-            sumTotal+=35;
-        }
-        return sumTotal;
     }
-
-}

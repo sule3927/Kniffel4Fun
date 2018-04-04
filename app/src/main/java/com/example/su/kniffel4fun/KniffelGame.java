@@ -1,8 +1,12 @@
 package com.example.su.kniffel4fun;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +22,7 @@ import android.widget.TextView;
 
 public class KniffelGame extends Activity implements View.OnClickListener {
 
+    int numberTurns = 0;
     private TextView txtPlayer;
     private ImageView iviewAvatar;
     private ImageButton dice1Btn;
@@ -54,10 +59,16 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private ImageButton backBtn;
     private Button scoreBtn;
 
+    int rollingDice;
+    SoundPool player;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kniffelgame_view);
+
+        player = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
+        rollingDice = player.load(this, R.raw.dice_roll, 1);
 
         PlayGame game = new PlayGame();
 
@@ -132,7 +143,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 //int [] testDice = {2,2,2,3,5};
-                checkDice.checkNumber(3,PlayGame.getCurrTurn().getAllDice());
+                checkDice.checkNumber(3, PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -141,7 +152,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         dice4Btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-               // int [] testDice = {2,2,2,3,4};
+                // int [] testDice = {2,2,2,3,4};
                 checkDice.checkNumber(4, PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
@@ -152,7 +163,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 //int [] testDice = {4,4,2,3,5};
-                checkDice.checkNumber(5,PlayGame.getCurrTurn().getAllDice());
+                checkDice.checkNumber(5, PlayGame.getCurrTurn().getAllDice());
                 showScores();
             }
         });
@@ -231,12 +242,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         kniffelBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                //PlayGame.changePlayer();
-                //txtPlayer.setText(PlayGame.getCurrPlayer().getName());
-                //iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
-                //showScores();
-                nextPlayer();
-                //setScoreNull(2);
+                checkDice.checkYatzy(PlayGame.getCurrTurn().getAllDice());
+                showScores();
             }
         });
 
@@ -314,6 +321,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                player.play(rollingDice, 1, 1, 1, 0, 1);
                 PlayGame.getCurrTurn().rollAllDice();
                 showAllDices();
             }
@@ -323,15 +331,26 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         backBtn.setOnClickListener(this);
 
         scoreBtn = (Button) findViewById(R.id.btnScore);
-        scoreBtn.setOnClickListener(this);
-    }
+        scoreBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getText(R.string.strBtnScore) == scoreBtn.getText()) {
+                    Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
+                    startActivity(intent);
+                    return;
+                }
+                if (PlayGame.getCountRounds()<12) {
+                    nextPlayer();
+                }
+                else {
+                    if (PlayGame.getCountRounds() == 12) {
+                        scoreBtn.setText(getResources().getText(R.string.strBtnScore));
+                        nextPlayer();
+                    }
+                }
 
-    public void nextPlayer() {
-        PlayGame.changePlayer();
-        txtPlayer.setText(PlayGame.getCurrPlayer().getName());
-        iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
-        showScores();
-        showAllDices();
+            }
+        });
     }
 
     @Override
@@ -341,12 +360,22 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
         int clickedElementScore = view.getId();
 
-        if (clickedElementScore == R.id.btnScore) {
-            Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
+        if (clickedElementScore == R.id.btnBack) {
+            Intent intent = new Intent(KniffelGame.this, MainActivity.class);
             startActivity(intent);
 
         }
     }
+
+    public void nextPlayer() {
+            PlayGame.changePlayer();
+            txtPlayer.setText(PlayGame.getCurrPlayer().getName());
+            iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+            showScores();
+            showAllDices();
+        }
+
+
 
     public void showScores() {
         txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
@@ -371,7 +400,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     public static void showDice(ImageView dice, int pipes) {
         switch (pipes) {
             case 0:
-                dice.setColorFilter(R.drawable.question);
+                dice.setImageResource(R.drawable.question);
                 break;
             case 1:
                 dice.setImageResource(R.drawable.dice1);
@@ -481,6 +510,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         alertDialog.show();
     }
 
+    public void endGame(){
+        PlayGame.calculateResult();
+        Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
+        startActivity(intent);
+    }
 
 }
 

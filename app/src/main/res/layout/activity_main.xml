@@ -92,7 +92,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:labelFor="@id/editName"
-                android:textColor="@color/colorDarkRed"
+                android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/spiAvatar"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -170,24 +170,28 @@
     </LinearLayout>
 
 
-    <ImageButton
-        android:id="@+id/ibtnFinish"
+    <Button
+        android:id="@+id/btnInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorMiddleYellow"
-        android:contentDescription="@string/strBtnFinish"
+        android:contentDescription="@string/strBtnInfo"
         android:padding="8dp"
+        android:text="@string/strBtnInfo"
+        android:textColor="@color/colorDarkRed"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/left_arrow" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
         android:background="@color/colorMiddleYellow"
         android:padding="8dp"
         android:text="@string/strBtnStart"
