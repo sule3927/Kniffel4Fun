@@ -32,6 +32,9 @@ public class ScoreGame extends Activity implements View.OnClickListener {
     private TextView txtPlayer3ScoreAll;
     private ImageButton backBtn;
     private Button quitBtn;
+    private TextView txtPlayer1Name;
+    private TextView txtPlayer2Name;
+    private TextView txtPlayer3Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +42,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         setContentView(R.layout.score_game);
         setResults();
 
-        backBtn = (ImageButton) findViewById(R.id.btnBack);
-        backBtn.setOnClickListener(this);
+  //      backBtn = (ImageButton) findViewById(R.id.btnBack);
+//        backBtn.setOnClickListener(this);
 
         quitBtn = (Button) findViewById(R.id.btnEndGame);
         quitBtn.setOnClickListener(this);
@@ -55,6 +58,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
             PlayGame.setCurrPlayer(nextPlayer);
             switch (thisPlayer){
                 case 0:
+                    txtPlayer1Name = (TextView) findViewById(R.id.txtPlayer1Name);
+                    txtPlayer1Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer1UpperSection = (TextView) findViewById(R.id.txtPlayer1UpperSection);
                     txtPlayer1UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
                     txtPlayer1LowerSection = (TextView) findViewById(R.id.txtPlayer1LowerSection);
@@ -67,6 +72,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
                     txtPlayer1ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
                     break;
                 case 1:
+                    txtPlayer2Name = (TextView) findViewById(R.id.txtPlayer2Name);
+                    txtPlayer2Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer2UpperSection = (TextView) findViewById(R.id.txtPlayer2UpperSection);
                     txtPlayer2UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
                     txtPlayer2LowerSection = (TextView) findViewById(R.id.txtPlayer2LowerSection);
@@ -79,6 +86,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
                     txtPlayer2ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
                     break;
                 case 2:
+                    txtPlayer3Name = (TextView) findViewById(R.id.txtPlayer3Name);
+                    txtPlayer3Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer3UpperSection = (TextView) findViewById(R.id.txtPlayer3UpperSection);
                     txtPlayer3UpperSection.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(0)));
                     txtPlayer3LowerSection = (TextView) findViewById(R.id.txtPlayer3LowerSection);
