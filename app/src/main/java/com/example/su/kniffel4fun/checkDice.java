@@ -18,7 +18,7 @@ public class checkDice {
     * @author: Merle Friedrichsen
     * @params: dice-pips (WÃ¼rfelaugen) that the user wants to count
     * @return: number of dices that show the number of pips / 0 if no dice shows number of pips*/
-    public static void checkNumber(int number, int[] dice) {
+    public static int checkNumber(int number, int[] dice) {
         int i;
         int returnvalue = 0;
         int sum = 0;
@@ -29,24 +29,24 @@ public class checkDice {
                 sum = returnvalue*number;
             }
             else {
-
             }
         }
-        PlayGame.getCurrPlayer().setPoints(sum, arrayIndex);
+        return sum;
+        //PlayGame.getCurrPlayer().setPoints(sum, arrayIndex);
     }
 
     /*
     * public method checkFullhouse, checks if the dices fullfill the requirements of a fullhouse
     * @author: Merle Friedrichsen
     * @return: points for fullhouse / 0 if no no fullhouse*/
-    public static void checkFullhouse (int[]dice) {
+    public static int checkFullhouse (int[]dice) {
 
         Arrays.sort(dice);
         if ((dice[0] == dice[1]) && (dice[3] == dice[4]) && ((dice[2] == dice[1]) || (dice[2] == dice[3]))){
-            PlayGame.getCurrPlayer().setPoints(25,8);
+            //PlayGame.getCurrPlayer().setPoints(25,8);
+            return 25;
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,8);
-
+            return 0;
         }
     }
 
@@ -55,17 +55,19 @@ public class checkDice {
     * public method check3OfAKind, checks if the dices fullfill the requirements of 3 of a kind
     * @author: Judith Balss
     * @return: points for 3 of a kind  / 0 if not 3 of a kind or more*/
-    public static void check3OfAKind(int[] dice) {
+    public static int check3OfAKind(int[] dice) {
         Arrays.sort(dice);
         if ((dice[0] == dice[1]) && (dice[0] == dice [2]) || (dice[1] == dice[2]) && (dice[1] == dice [3]) || (dice[2] == dice[3]) && (dice[2] == dice [4])){
             int sum = 0;
             for (int i : dice) {
                 sum += i;
             }
-            PlayGame.getCurrPlayer().setPoints(sum,6);
+            return sum;
+            //PlayGame.getCurrPlayer().setPoints(sum,6);
 
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,6);
+            return 0;
+           // PlayGame.getCurrPlayer().setPoints(1000,6);
         }
     }
 
@@ -73,16 +75,18 @@ public class checkDice {
     * public method check4OfAKind, checks if the dices fullfill the requirements of 4 of a kind
     * @author: Judith Balss
     * @return: points for 4 of a kind  / 0 if not 4 of a kind or more*/
-    public static void check4OfAKind (int [] dice) {
+    public static int check4OfAKind (int [] dice) {
         Arrays.sort(dice);
         if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) || (dice[1] == dice[2]) && (dice[1] == dice [3]) && (dice[1] == dice[4])){
             int sum = 0;
             for (int i : dice) {
                 sum += i;
             }
-            PlayGame.getCurrPlayer().setPoints(sum,7);
+            return sum;
+            //PlayGame.getCurrPlayer().setPoints(sum,7);
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,7);
+            return 0;
+            //PlayGame.getCurrPlayer().setPoints(1000,7);
         }
     }
 
@@ -90,12 +94,14 @@ public class checkDice {
     * public method checkYatzy, checks if the dices fullfill the requirements of a yatzy
     * @author: Judith Balss
     * @return: points for yatzy  / 0 if not a yatzy */
-    public static void checkYatzy (int [] dice) {
+    public static int checkYatzy (int [] dice) {
         Arrays.sort(dice);
         if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) && (dice[0] == dice[4]) && dice[0]>0){
-            PlayGame.getCurrPlayer().setPoints(50,11);
+            return 50;
+            //PlayGame.getCurrPlayer().setPoints(50,11);
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,11);
+            return 0;
+            //PlayGame.getCurrPlayer().setPoints(1000,11);
         }
     }
 
@@ -103,12 +109,13 @@ public class checkDice {
     * public method check4OfAKind, sums all pips of the selceted dices as a chance
     * @author: Judith Balss
     * @return: points for 4 of a kind  / 0 if not 4 of a kind or more*/
-    public static void checkChance (int [] dice) {
+    public static int checkChance (int [] dice) {
         int sum = 0;
         for (int i : dice) {
             sum += i;
         }
-        PlayGame.getCurrPlayer().setPoints(sum,12);
+        return sum;
+        //PlayGame.getCurrPlayer().setPoints(sum,12);
 
     }
 
@@ -116,7 +123,7 @@ public class checkDice {
     * public method checkSmallStraight (kleine StraÃŸe), checks if the dices fullfill the requirements of a smallStraight
     * @author: Merle Friedrichsen
     * @return: points for smallStraight / 0 if no smallStraight*/
-    public static void checkSmallStraight (int [] dice) {
+    public static int checkSmallStraight (int [] dice) {
         Arrays.sort(dice);
         int longestRow = 1;
         int i;
@@ -129,9 +136,11 @@ public class checkDice {
             }
         }
         if (longestRow >= 4) {
-            PlayGame.getCurrPlayer().setPoints(30,9);
+            return 30;
+            //PlayGame.getCurrPlayer().setPoints(30,9);
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,9);
+            return 0;
+            //PlayGame.getCurrPlayer().setPoints(1000,9);
         }
     }
 
@@ -139,7 +148,7 @@ public class checkDice {
     * public method checkLargeStraight (groÃŸe StraÃŸe), checks if the dices fullfill the requirements of a LargeStraight
     * @author: Merle Friedrichsen
     * @return: points for LargeStraight / 0 if no no LargeStraight*/
-    public static void checkLargeStraight (int []dice) {
+    public static int checkLargeStraight (int []dice) {
         Arrays.sort(dice);
         boolean largeStraight = true;
         int i = 0;
@@ -151,9 +160,11 @@ public class checkDice {
         }
 
         if (largeStraight == true) {
-            PlayGame.getCurrPlayer().setPoints(40,10);
+            return 40;
+            //PlayGame.getCurrPlayer().setPoints(40,10);
         } else {
-            PlayGame.getCurrPlayer().setPoints(1000,10);
+            return 0;
+            //PlayGame.getCurrPlayer().setPoints(1000,10);
         }
     }
 
