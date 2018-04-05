@@ -1,5 +1,6 @@
 package com.example.su.kniffel4fun;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button startBtn;
     private Button btnNewPlayer;
     private EditText editName;
+    private Button btnInfo;
     private int selectedID;
 
     private Animation animationJiggle;
@@ -83,6 +85,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, editName.getText().toString()+" "+ getString(R.string.strPlayerCreated), Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnInfo = (Button) findViewById(R.id.btnInfo);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                infoTxt();
+            }
+        });
+
+
     }
 
     private void initList() {
@@ -125,34 +137,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.selectedID = selectedID;
     }
 
-    /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-    //PlayGame game = new PlayGame();
-    //int i = game.testPlayer();
+    public void infoTxt(){
+        android.support.v7.app.AlertDialog.Builder alertDialogInfo = new android.support.v7.app.AlertDialog.Builder(this);
+        alertDialogInfo.setTitle("Info");
+        alertDialogInfo.setMessage("INFORMATION ABOUT USED GRAPHICS\n" +
+                "\n" +
+                "All used graphic resources in these application are \"Designed by Vecteezy / Freepik\" and are free to use:\n" +
+                "\n" +
+                "For both personal and commercial projects and to modify it.\n" +
+                "In a website or presentation template or application or as part of your design.\n" +
+                "The full terms of the license are described in section 7 of the Freepik terms of use, available online in the following link:\n" +
+                "\n" +
+                "http://www.freepik.com/terms_of_use\n" +
+                "\n" +
+                "The terms described in the above link have precedence over the terms described in the present document. In case of disagreement, the Freepik Terms of Use will prevail.\n" +
+                "\n" +
+                "INFORMATION ABOUT USED SOUND\n" +
+                "\n" +
+                "This application uses these sound from freesound:\n" +
+                "\n" +
+                "Dice Rolling in Cup.wav by Mick Gibbs ( https://freesound.org/people/Mick%20Gibbs/sounds/202986/ ).");
+        alertDialogInfo.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        //create alert dialog
+        alertDialogInfo.create();
 
-/*        /*test MF
-        checkDice dice = new checkDice();
-        int result = dice.checkNumber(2);
-        Log.d("SENSO", "Ergebnis ist "+result);
-        int fullhouse = dice.checkFullhouse();
-        Log.d("SENSO", "Fullhouse ist "+fullhouse);
-        int largeStraight = dice.checkLargeStraight();
-        Log.d("SENSO", "große Straße bringt "+largeStraight+" Punkte!");
-        int smallStraight = dice.checkSmallStraight();
-        Log.d("SENSO", "kleine Straße bringt "+smallStraight+" Punkte!");
-
-        /*test JB
-        int threeofakind = dice.check3OfAKind();
-        Log.d("SENSO", "3 of a kind ist "+threeofakind);
-
-        int fourofakind = dice.check4OfAKind();
-        Log.d("SENSO", "4 of a kind ist "+fourofakind);
-
-        int yatzy = dice.checkYatzy();
-        Log.d("SENSO", "Yatzy ist "+yatzy);
-
-        int chance = dice.checkChance();
-        Log.d("SENSO", "Chance ist "+chance);
-    }*/
+        //show alert dialog
+        alertDialogInfo.show();
+    }
 }
 
 
