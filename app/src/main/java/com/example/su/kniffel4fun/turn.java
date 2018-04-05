@@ -1,5 +1,9 @@
 package com.example.su.kniffel4fun;
 
+
+import android.widget.EditText;
+
+
 /**
  * Created by Merle on 25.03.2018.
  */

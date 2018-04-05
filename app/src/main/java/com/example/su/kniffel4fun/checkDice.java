@@ -92,7 +92,7 @@ public class checkDice {
     * @return: points for yatzy  / 0 if not a yatzy */
     public static void checkYatzy (int [] dice) {
         Arrays.sort(dice);
-        if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) && (dice[0] == dice[4])){
+        if ((dice[0] == dice[1]) && (dice[0] == dice [2]) && (dice[0] == dice[3]) && (dice[0] == dice[4]) && dice[0]>0){
             PlayGame.getCurrPlayer().setPoints(50,11);
         } else {
             PlayGame.getCurrPlayer().setPoints(1000,11);

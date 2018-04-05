@@ -4,7 +4,9 @@ package com.example.su.kniffel4fun;
  * Created by judith on 06.03.2018.
  */
 
+
 import android.util.Log;
+
 
 public class PlayGame {
     private static Player currPlayer;
@@ -77,7 +79,7 @@ public class PlayGame {
     public static void calculateResult(){
         int[] scores = currPlayer.scores;
         int sumTop = scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5];
-        currPlayer.finalScore[1] = sumTop;
+        currPlayer.finalScore[0] = sumTop;
         int sumBottom = scores[6] + scores[7] + scores[8] + scores[9] + scores[10] + scores[12];
         currPlayer.finalScore[2] = sumBottom;
         if (sumTop >= 63) {
