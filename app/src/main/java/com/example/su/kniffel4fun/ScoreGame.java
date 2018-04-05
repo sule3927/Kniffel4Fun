@@ -30,6 +30,23 @@ public class ScoreGame extends Activity implements View.OnClickListener {
     private TextView txtPlayer3Yatzy;
     private TextView txtPlayer3Bonus;
     private TextView txtPlayer3ScoreAll;
+    private ImageButton backBtn;
+    private Button quitBtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.score_game);
+        setResults();
+
+        backBtn = (ImageButton) findViewById(R.id.btnBack);
+        backBtn.setOnClickListener(this);
+
+        quitBtn = (Button) findViewById(R.id.btnEndGame);
+        quitBtn.setOnClickListener(this);
+
+    }
+
 
     public void setResults(){
         int thisPlayer = 0;
@@ -78,22 +95,25 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.score_game);
-        setResults();
-    }
+
 
     @Override
     public void onClick(View view) {
 
-        finish();
+        int clickedElementBack = view.getId();
+
+        if (clickedElementBack == R.id.btnBack) {
+
+            Intent intent = new Intent(ScoreGame.this, MainActivity.class);
+            startActivity(intent);
         }
 
+        int clickedElementQuit = view.getId();
 
-    public void OnButtonClick(View view) {
+        if (clickedElementQuit == R.id.btnEndGame) {
+            finish();
+            System.exit(0);
+        }
 
-        System.exit(0);
-
-    }}
+    }
+}
