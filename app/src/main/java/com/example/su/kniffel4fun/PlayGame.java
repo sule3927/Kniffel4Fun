@@ -80,14 +80,14 @@ public class PlayGame {
         int[] scores = currPlayer.scores;
         int sumTop = scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5];
         currPlayer.finalScore[0] = sumTop;
-        int sumBottom = scores[6] + scores[7] + scores[8] + scores[9] + scores[10] + scores[12];
+        int sumBottom = scores[6] + scores[7] + scores[8] + scores[9] + scores[10] + scores[11];
         currPlayer.finalScore[2] = sumBottom;
         if (sumTop >= 63) {
             currPlayer.finalScore[1] = 35;
         } else {
             currPlayer.finalScore[1] = 0;
         }
-        currPlayer.finalScore[3] = scores[11];
+        currPlayer.finalScore[3] = scores[12];
         currPlayer.finalScore[4] = currPlayer.finalScore[0] + currPlayer.finalScore[1] + currPlayer.finalScore[2] + currPlayer.finalScore[3];
         Log.d("SENSO", getCurrPlayer() + " oben" + currPlayer.finalScore[0] + " bonus " + currPlayer.finalScore[1] + " unten " + currPlayer.finalScore[2] + " Kniffel " + currPlayer.finalScore[3] + " Total " + currPlayer.finalScore[4]);
     }
