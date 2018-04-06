@@ -59,7 +59,7 @@
     <string name="strBtnInfo">Info</string>
     <string name="strBtnRules">Game Rules</string>
     <string name="strBtnPlayerName">Player Name</string>
-
+    <string name="strPlsEnterName">Please create a player</string>
 
 
 </resources>

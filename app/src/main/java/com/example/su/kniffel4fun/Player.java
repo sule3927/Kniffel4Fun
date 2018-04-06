@@ -29,10 +29,13 @@ public class Player {
         allPlayers.add(this);
     }
 
-       /*methods*/
-       public String getName() {
+    /*methods*/
+    public String getName() {
             return name;
         }
+    public static int getNumberOfPlayer() {
+        return numberOfPlayer;
+    }
 
 
     public int getAvatarID() {
