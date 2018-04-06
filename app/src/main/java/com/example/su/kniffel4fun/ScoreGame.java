@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -35,6 +36,10 @@ public class ScoreGame extends Activity implements View.OnClickListener {
     private TextView txtPlayer1Name;
     private TextView txtPlayer2Name;
     private TextView txtPlayer3Name;
+    private ImageView iviewPlayer1;
+    private ImageView iviewPlayer2;
+    private ImageView iviewPlayer3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
             PlayGame.setCurrPlayer(nextPlayer);
             switch (thisPlayer){
                 case 0:
+                    iviewPlayer1 = (ImageView) findViewById(R.id.iviewPlayer1);
+                    iviewPlayer1.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                     txtPlayer1Name = (TextView) findViewById(R.id.txtPlayer1Name);
                     txtPlayer1Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer1UpperSection = (TextView) findViewById(R.id.txtPlayer1UpperSection);
@@ -72,6 +79,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
                     txtPlayer1ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
                     break;
                 case 1:
+                    iviewPlayer2 = (ImageView) findViewById(R.id.iviewPlayer2);
+                    iviewPlayer2.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                     txtPlayer2Name = (TextView) findViewById(R.id.txtPlayer2Name);
                     txtPlayer2Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer2UpperSection = (TextView) findViewById(R.id.txtPlayer2UpperSection);
@@ -86,6 +95,8 @@ public class ScoreGame extends Activity implements View.OnClickListener {
                     txtPlayer2ScoreAll.setText(Integer.toString(PlayGame.getCurrPlayer().getFinalScore(4)));
                     break;
                 case 2:
+                    iviewPlayer3 = (ImageView) findViewById(R.id.iviewPlayer3);
+                    iviewPlayer3.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
                     txtPlayer3Name = (TextView) findViewById(R.id.txtPlayer3Name);
                     txtPlayer3Name.setText(PlayGame.getCurrPlayer().getName());
                     txtPlayer3UpperSection = (TextView) findViewById(R.id.txtPlayer3UpperSection);
