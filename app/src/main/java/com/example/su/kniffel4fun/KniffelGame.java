@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -557,7 +556,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     startActivity(intent);
                     return;
                 }
-                if (PlayGame.getCountRounds()<12) {
+                if (PlayGame.getCountRounds()<12 && PlayGame.getCurrTurn().isScored()) {
                     nextPlayer();
                 }
                 else {
