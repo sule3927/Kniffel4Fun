@@ -24,6 +24,10 @@ public class dice {
         return pipes;
     }
 
+    /**
+     *
+     * @param pipes
+     */
     public void setPipes(int pipes) {
         this.pipes = pipes;
     }

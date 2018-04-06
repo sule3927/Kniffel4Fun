@@ -1,6 +1,7 @@
 package com.example.su.kniffel4fun;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by judith on 28.02.2018.
@@ -10,6 +11,7 @@ public class Player {
        private String name = "";
        private int highscore = 0;
        private int avatarID = 0;
+       public boolean[] scoreSet = new boolean[13];
        public int[] scores = new int[13];
        public int [] finalScore = new int[5];
        public static ArrayList<Player> allPlayers = new ArrayList<Player>();
@@ -26,6 +28,7 @@ public class Player {
     public Player(String newName, int avatarID) {
         this.name = newName;
         this.avatarID = avatarID;
+        Arrays.fill(this.scoreSet, Boolean.FALSE);
         allPlayers.add(this);
     }
 
@@ -51,8 +54,13 @@ public class Player {
     }
 
     public void setPoints(int points, int arrayIndex){
-        this.scores[arrayIndex] = points;      }
+        this.scores[arrayIndex] = points;
+        this.scoreSet[arrayIndex] = true;
+       }
 
+    public boolean isScoresSet(int arrayIndex) {
+        return this.scoreSet[arrayIndex];
+    }
 
     /*methods finalScore*/
 

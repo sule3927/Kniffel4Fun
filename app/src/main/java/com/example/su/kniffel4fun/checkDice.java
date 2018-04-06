@@ -28,8 +28,6 @@ public class checkDice {
                 returnvalue += 1;
                 sum = returnvalue*number;
             }
-            else {
-            }
         }
         return sum;
         //PlayGame.getCurrPlayer().setPoints(sum, arrayIndex);
