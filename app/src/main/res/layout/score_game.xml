@@ -32,7 +32,8 @@
                 android:layout_marginTop="0dp"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
-                android:src="@drawable/podium" />
+                android:src="@drawable/podium"
+                android:contentDescription="TODO" />
 
             <ImageButton
                 android:id="@+id/iviewPlayer1"
