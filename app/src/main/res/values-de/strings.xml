@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kniffel4Fun</string>
+    <string name="app_name">Wuerfeln4Fun</string>
     <string name="strBtnFinish">Beenden</string>
     <string name="strBtnStart">Los gehts ...</string>
-    <string name="strTxtHeader">WILLKOMMEN ZU KNIFFEL FOR FUN</string>
+    <string name="strTxtHeader">WILLKOMMEN ZU WUERFELN FOR FUN</string>
     <string name="strTxtPlayerWelcome">Gebe deinen Namen ein</string>
     <string name="strViewAstronaut">Astronaut</string>
     <string name="strViewThief">Dieb</string>
     <string name="strViewMario">Mario</string>
+    <string name="strViewAvatar">Avatar</string>
     <string name="strViewDice1">1. Wuerfel</string>
     <string name="strViewDice2">2. Wuerfel</string>
     <string name="strViewDice3">3. Wuerfel</string>
@@ -41,7 +42,7 @@
     <string name="strTxtChance">CCC</string>
     <string name="strBtn3er">3er</string>
     <string name="strBtn4er">4er</string>
-    <string name="strBtnKniffel">KNIFFEL +50</string>
+    <string name="strBtnKniffel">5er Pasch +50</string>
     <string name="strBtnRollDice">WUERFELN</string>
     <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Beenden</string>
@@ -57,6 +58,7 @@
     <string name="strViewYatzy">Kniffel</string>
     <string name="strViewScoreAll">Gesamt</string>
     <string name="strBtnInfo">Info</string>
+    <string name="strBtnRules">Spielregeln</string>
     <string name="strBtnPlayerName">Spieler-Name</string>
 
 
