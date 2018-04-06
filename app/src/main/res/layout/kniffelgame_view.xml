@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorMiddleYellow">
+    android:background="@color/colorMiddleYellow"
+    tools:context=".ScoreGame">
 
 
     <LinearLayout
         android:id="@+id/layoutKniffelGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,9 +32,8 @@
             <ImageView
                 android:id="@+id/iviewAvatar"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="0.5"
                 android:contentDescription="@string/strViewAstronaut"
                 android:src="@drawable/astronaut" />
@@ -37,8 +42,7 @@
                 android:id="@+id/txtPlayer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical|center_horizontal"
                 android:textColor="@color/colorPrimary"
@@ -367,7 +371,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="fill_horizontal"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
@@ -444,46 +447,59 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="fill_horizontal"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
                 android:contentDescription="@string/strBtnRollDice"
-                android:padding="15dp"
                 android:text="@string/strBtnRollDice"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:contentDescription="@string/strBtnBack"
+                android:src="@drawable/left_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCountDiceRoll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@color/colorMiddleYellow"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btnScore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorMiddleYellow"
+                android:text="@string/strTxtNxtPlayer"
+                android:textColor="@color/colorDarkRed"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </LinearLayout>
+
     </LinearLayout>
-
-
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@color/colorMiddleYellow"
-        android:contentDescription="@string/strBtnBack"
-        android:padding="8dp"
-        android:src="@drawable/left_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@color/colorMiddleYellow"
-        android:padding="8dp"
-        android:text="@string/strTxtNxtPlayer"
-        android:textColor="@color/colorDarkRed"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
 
 </android.support.constraint.ConstraintLayout>

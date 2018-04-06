@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +61,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private Button rollDiceBtn;
     private ImageButton backBtn;
     private Button scoreBtn;
+    private TextView txtCountDiceRoll;
+
     int rollingDice;
     SoundPool player;
     public List<TextView> textViews;
@@ -83,6 +87,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
+
+        txtCountDiceRoll = (TextView) findViewById(R.id.txtCountDiceRoll);
 
         txtDice1 = (TextView) findViewById(R.id.txtDice1);
         //txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
@@ -524,9 +530,17 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.play(rollingDice, 1, 1, 1, 0, 1);
-                PlayGame.getCurrTurn().rollAllDice();
-                showAllDices();
+               if (PlayGame.getCurrTurn().getCountRolls() <= 2) {
+                    player.play(rollingDice, 1, 1, 1, 0, 1);
+                    PlayGame.getCurrTurn().rollAllDice();
+                    showAllDices();
+                    txtCountDiceRoll.setText(Integer.toString(PlayGame.getCurrTurn().getCountRolls()));
+                    return;
+                }
+                else{
+                    Toast.makeText(KniffelGame.this, getString(R.string.strPlsSelectScore), Toast.LENGTH_SHORT).show();
+                    return;
+                }
             }
         });
 
@@ -575,6 +589,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             PlayGame.changePlayer();
             txtPlayer.setText(PlayGame.getCurrPlayer().getName());
             iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+            txtCountDiceRoll.setText(Integer.toString(0));
             showScores();
             showAllDices();
         }
@@ -597,8 +612,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
-    //MediaPlayer für den Würfel-Sound
-    //final MediaPlayer rollDiceSound;
+
 
 
     public static void showDice(ImageView dice, int pipes) {
@@ -744,12 +758,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         //show alert dialog
         alertDialog.show();
         return 0;
-    }
-
-    public void endGame(){
-        PlayGame.calculateResult();
-        Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
-        startActivity(intent);
     }
 
 }

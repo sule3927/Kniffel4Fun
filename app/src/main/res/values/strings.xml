@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">Yatzi4Fun</string>
+    <string name="app_name">Dice4Fun</string>
     <string name="strBtnFinish">Exit</string>
     <string name="strBtnStart">Lets go ...</string>
-    <string name="strTxtHeader">WELCOME TO YATZI FOR FUN</string>
+    <string name="strTxtHeader">WELCOME TO DICE FOR FUN</string>
     <string name="strTxtPlayerWelcome">Enter your Name</string>
     <string name="strViewAstronaut">Astronaut</string>
     <string name="strViewThief">Thief</string>
     <string name="strViewMario">Mario</string>
+    <string name="strViewAvatar">Avatar</string>
     <string name="strViewDice1">1. Dice</string>
     <string name="strViewDice2">2. Dice</string>
     <string name="strViewDice3">3. Dice</string>
@@ -40,7 +41,7 @@
     <string name="strTxtChance">CCC</string>
     <string name="strBtn3er">3er</string>
     <string name="strBtn4er">4er</string>
-    <string name="strBtnKniffel">KNIFFEL +50</string>
+    <string name="strBtnKniffel">5er Dice +50</string>
     <string name="strBtnRollDice">Roll the Dice</string>
     <string name="strBtnScore">SCORE</string>
     <string name="strBtnEndGame">Quit Game</string>
@@ -56,8 +57,9 @@
     <string name="strViewYatzy">Yatzy</string>
     <string name="strViewScoreAll">Total</string>
     <string name="strBtnInfo">Info</string>
+    <string name="strBtnRules">Game Rules</string>
     <string name="strBtnPlayerName">Player Name</string>
-
-
+    <string name="strPlsEnterName">Please create a player</string>
+    <string name="strPlsSelectScore">Please select a result</string>
 
 </resources>
