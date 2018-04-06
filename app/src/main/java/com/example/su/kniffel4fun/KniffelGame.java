@@ -559,8 +559,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         txtChance.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(12)));
     }
 
-    //MediaPlayer für den Würfel-Sound
-    //final MediaPlayer rollDiceSound;
+
 
 
     public static void showDice(ImageView dice, int pipes) {

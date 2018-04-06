@@ -57,7 +57,7 @@
     <string name="strViewScoreAll">Total</string>
     <string name="strBtnInfo">Info</string>
     <string name="strBtnPlayerName">Player Name</string>
-
+    <string name="strPlsEnterName">Please create a player</string>
 
 
 </resources>
