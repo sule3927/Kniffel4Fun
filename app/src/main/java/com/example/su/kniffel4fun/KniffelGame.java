@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Su on 18.03.2018.
@@ -56,6 +57,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     private Button rollDiceBtn;
     private ImageButton backBtn;
     private Button scoreBtn;
+    private TextView txtCountDiceRoll;
 
     int rollingDice;
     SoundPool player;
@@ -78,6 +80,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(this);
+
+        txtCountDiceRoll = (TextView) findViewById(R.id.txtCountDiceRoll);
 
         txtDice1 = (TextView) findViewById(R.id.txtDice1);
         txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
@@ -487,9 +491,17 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.play(rollingDice, 1, 1, 1, 0, 1);
-                PlayGame.getCurrTurn().rollAllDice();
-                showAllDices();
+                if (PlayGame.getCurrTurn().getCountRolls() <= 2) {
+                    player.play(rollingDice, 1, 1, 1, 0, 1);
+                    PlayGame.getCurrTurn().rollAllDice();
+                    showAllDices();
+                    txtCountDiceRoll.setText(Integer.toString(PlayGame.getCurrTurn().getCountRolls()));
+                    return;
+                }
+                else{
+                    Toast.makeText(KniffelGame.this, getString(R.string.strPlsSelectScore), Toast.LENGTH_SHORT).show();
+                    return;
+                }
             }
         });
 
@@ -538,6 +550,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             PlayGame.changePlayer();
             txtPlayer.setText(PlayGame.getCurrPlayer().getName());
             iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
+            txtCountDiceRoll.setText(Integer.toString(0));
             showScores();
             showAllDices();
         }

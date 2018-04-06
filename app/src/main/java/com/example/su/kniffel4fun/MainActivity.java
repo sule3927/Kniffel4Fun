@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnNewPlayer;
     private EditText editName;
     private Button btnInfo;
+    private Button btnRules;
     private int selectedID;
 
     private Animation animationJiggle;
@@ -94,13 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        /*btnInfo = (Button) findViewById(R.id.btnInfo);
-        btnInfo.setOnClickListener(new View.OnClickListener() {
+        btnRules = (Button) findViewById(R.id.btnRules);
+        btnRules.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                infoTxt();
+                rulesTxt();
             }
-        });*/
+        });
 
     }
 

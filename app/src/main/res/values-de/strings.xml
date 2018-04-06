@@ -61,6 +61,8 @@
     <string name="strBtnRules">Spielregeln</string>
     <string name="strBtnPlayerName">Spieler-Name</string>
     <string name="strPlsEnterName">Bitte erstelle einen Spieler</string>
+    <string name="strPlsSelectScore">Bitte wähle dein Ergebnis</string>
+
 
 
 

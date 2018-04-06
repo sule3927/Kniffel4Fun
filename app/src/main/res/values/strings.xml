@@ -60,6 +60,6 @@
     <string name="strBtnRules">Game Rules</string>
     <string name="strBtnPlayerName">Player Name</string>
     <string name="strPlsEnterName">Please create a player</string>
-
+    <string name="strPlsSelectScore">Please select a result</string>
 
 </resources>
