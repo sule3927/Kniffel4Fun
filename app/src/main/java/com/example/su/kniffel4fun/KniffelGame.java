@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -491,7 +492,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         rollDiceBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (PlayGame.getCurrTurn().getCountRolls() <= 2) {
+               if (PlayGame.getCurrTurn().getCountRolls() <= 2) {
                     player.play(rollingDice, 1, 1, 1, 0, 1);
                     PlayGame.getCurrTurn().rollAllDice();
                     showAllDices();
@@ -718,12 +719,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         //show alert dialog
         alertDialog.show();
         return 0;
-    }
-
-    public void endGame(){
-        PlayGame.calculateResult();
-        Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
-        startActivity(intent);
     }
 
 }
