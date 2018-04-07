@@ -61,5 +61,6 @@
     <string name="strBtnPlayerName">Player Name</string>
     <string name="strPlsEnterName">Please create a player</string>
     <string name="strPlsSelectScore">Please select a result</string>
+    <string name="strViewPodium">Podium</string>
 
 </resources>

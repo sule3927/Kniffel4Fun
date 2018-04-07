@@ -33,7 +33,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorMiddleYellow"
                 android:src="@drawable/podium"
-                android:contentDescription="TODO" />
+                android:contentDescription="@string/strViewPodium" />
 
             <ImageButton
                 android:id="@+id/iviewPlayer1"
