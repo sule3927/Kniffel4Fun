@@ -371,16 +371,16 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                         //largeStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
-                        setScoreNull(12);
+                        setScoreNull(11);
                             showScores();
-                        if (PlayGame.getCurrTurn().isScored() == true){
-                            return;
-                        }
-                        else{
-                            return;
-                        }
+                        //if (PlayGame.getCurrTurn().isScored() == true){
+                        //    return;
+                        //}
+                        //else{
+                        //    return;
+                        //}
                     }
-                    return;
+                    //return;
             }
             }
         });
@@ -676,73 +676,73 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 switch (choice) {
                     case 1:
                         PlayGame.getCurrPlayer().setPoints(0, 0);
-                        dice1Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice1Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 2:
                         PlayGame.getCurrPlayer().setPoints(0, 1);
-                        dice2Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice2Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 3:
                         PlayGame.getCurrPlayer().setPoints(0, 2);
-                        dice3Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice3Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 4:
                         PlayGame.getCurrPlayer().setPoints(0, 3);
-                        dice4Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice4Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 5:
                         PlayGame.getCurrPlayer().setPoints(0, 4);
-                        dice5Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice5Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 6:
                         PlayGame.getCurrPlayer().setPoints(0, 5);
-                        dice6Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //dice6Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 7:
                         PlayGame.getCurrPlayer().setPoints(0, 6);
-                        tripletsBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
+                        //tripletsBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 8:
                         PlayGame.getCurrPlayer().setPoints(0, 7);
-                        allfoursBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
+                        //allfoursBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 9:
                         PlayGame.getCurrPlayer().setPoints(0, 8);
-                        houseBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //houseBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 10:
                         PlayGame.getCurrPlayer().setPoints(0, 9);
-                        smallStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //smallStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 11:
                         PlayGame.getCurrPlayer().setPoints(0, 10);
-                        largeStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
+                        //largeStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 12:
                         PlayGame.getCurrPlayer().setPoints(0, 12);
-                        kniffelBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
+                        //kniffelBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
