@@ -51,19 +51,19 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         backBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                  Intent intent = new Intent(ScoreGame.this, MainActivity.class);
-                  startActivity(intent);
+                Intent intent = new Intent(ScoreGame.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
         quitBtn = (Button) findViewById(R.id.btnEndGame);
         quitBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick (View v){
+            @Override
+            public void onClick (View v){
                 finish();
                 System.exit(0);
             }
-            });
+        });
 
     }
 
@@ -128,24 +128,14 @@ public class ScoreGame extends Activity implements View.OnClickListener {
     }
 
 
-
     @Override
     public void onClick(View view) {
-
-       // int clickedElementBack = view.getId();
-
-        //if (clickedElementBack == R.id.btnBack) {
-
-          //  Intent intent = new Intent(ScoreGame.this, MainActivity.class);
-          //  startActivity(intent);
-        //}
-
         int clickedElementQuit = view.getId();
 
-       if (clickedElementQuit == R.id.btnEndGame) {
+        if (clickedElementQuit == R.id.btnEndGame) {
             finish();
             System.exit(0);
-        }
 
+        }
     }
 }
