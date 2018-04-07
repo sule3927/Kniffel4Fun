@@ -404,7 +404,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 if (PlayGame.getCurrTurn().isScored() == false  && PlayGame.getCurrPlayer().isScoresSet(12) == false) {
-                    if (checkDice.checkSmallStraight(PlayGame.getCurrTurn().getAllDice())> 0){
+                    if (checkDice.checkYatzy(PlayGame.getCurrTurn().getAllDice())> 0){
                         PlayGame.getCurrPlayer().setPoints(50,12);
                         showScores();
                         //kniffelBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));

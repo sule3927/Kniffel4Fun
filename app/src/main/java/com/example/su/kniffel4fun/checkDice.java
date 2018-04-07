@@ -129,7 +129,7 @@ public class checkDice {
             int distance = dice[i+1] - dice[i];
             if (distance == 1) {
                 longestRow++;
-            } else if (distance >=1) {
+            } else if (distance >=1 && longestRow < 3) {
                 longestRow = 1;
             }
         }
