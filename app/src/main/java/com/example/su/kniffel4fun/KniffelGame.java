@@ -494,6 +494,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
     /**
      * undates inte imageview of a dice to the picture of the pipes a dice is showing
+     *
      * @param dice
      * @param pipes
      */
@@ -539,12 +540,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
     /**
      * method that oopens up an alter dialog where the user can choose
      * if a score shall be 0 or not
+     *
      * @param choice the categiry where the user wants to have 0 points, for example large street
-     * @return int 0
      */
-    public int setScoreNull(final int choice) {
-        int returnValue;
-        int value;
+    public void setScoreNull(final int choice) {
 
         android.support.v7.app.AlertDialog.Builder alertDialog = new android.support.v7.app.AlertDialog.Builder(this);
         alertDialog.setMessage(getString(R.string.strDialogTitle));
@@ -552,7 +551,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         alertDialog.setPositiveButton(getString(R.string.strDialogReturn), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                return;
             }
         });
 
@@ -563,75 +561,50 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 switch (choice) {
                     case 1:
                         PlayGame.getCurrPlayer().setPoints(0, 0);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 2:
                         PlayGame.getCurrPlayer().setPoints(0, 1);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 3:
                         PlayGame.getCurrPlayer().setPoints(0, 2);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 4:
                         PlayGame.getCurrPlayer().setPoints(0, 3);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 5:
                         PlayGame.getCurrPlayer().setPoints(0, 4);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 6:
                         PlayGame.getCurrPlayer().setPoints(0, 5);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 7:
                         PlayGame.getCurrPlayer().setPoints(0, 6);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 8:
                         PlayGame.getCurrPlayer().setPoints(0, 7);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 9:
                         PlayGame.getCurrPlayer().setPoints(0, 8);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 10:
                         PlayGame.getCurrPlayer().setPoints(0, 9);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 11:
                         PlayGame.getCurrPlayer().setPoints(0, 10);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
                     case 12:
                         PlayGame.getCurrPlayer().setPoints(0, 12);
-                        PlayGame.getCurrTurn().setScored(true);
-                        showScores();
                         break;
 
                 }
+                PlayGame.getCurrTurn().setScored(true);
+                showScores();
             }
         });
-
         //create alert dialog
         alertDialog.create();
-
         //show alert dialog
         alertDialog.show();
-        return 0;
     }
 
 }
