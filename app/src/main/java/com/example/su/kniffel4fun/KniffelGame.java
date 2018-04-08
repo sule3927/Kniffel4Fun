@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,12 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Su on 18.03.2018.
+ * @author Susann Leonhardt on 18.03.2018.
  */
 
 public class KniffelGame extends Activity implements View.OnClickListener {
 
-    int numberTurns = 0;
     private TextView txtPlayer;
     private ImageView iviewAvatar;
     private ImageButton dice1Btn;
@@ -85,45 +83,21 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         iviewAvatar.setImageResource(PlayGame.getCurrPlayer().getAvatarID());
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
-        dice1Btn.setOnClickListener(this);
+//        dice1Btn.setOnClickListener(this);
 
         txtCountDiceRoll = (TextView) findViewById(R.id.txtCountDiceRoll);
-
         txtDice1 = (TextView) findViewById(R.id.txtDice1);
-        //txtDice1.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(0)));
-
         txtDice2 = (TextView) findViewById(R.id.txtDice2);
-        //txtDice2.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(1)));
-
         txtDice3 = (TextView) findViewById(R.id.txtDice3);
-        //txtDice3.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(2)));
-
         txtDice4 = (TextView) findViewById(R.id.txtDice4);
-        //txtDice4.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(3)));
-
         txtDice5 = (TextView) findViewById(R.id.txtDice5);
-        //txtDice5.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(4)));
-
         txtDice6 = (TextView) findViewById(R.id.txtDice6);
-        //txtDice6.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(5)));
-
         txt3er = (TextView) findViewById(R.id.txt3er);
-        //txt3er.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(6)));
-
         txt4er = (TextView) findViewById(R.id.txt4er);
-        //txt4er.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(7)));
-
         txtHouse = (TextView) findViewById(R.id.txtHouse);
-        //txtHouse.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(8)));
-
         txtSmallStreet = (TextView) findViewById(R.id.txtSmallStreet);
-        //txtSmallStreet.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(9)));
-
         txtLargeStreet = (TextView) findViewById(R.id.txtLargeStreet);
-        //txtLargeStreet.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(10)));
-
         txtChance = (TextView) findViewById(R.id.txtChance);
-        //txtChance.setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(11)));
 
         dice1Btn = (ImageButton) findViewById(R.id.btnDice1);
         dice1Btn.setOnClickListener(new OnClickListener() {
@@ -133,16 +107,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(1, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(1, PlayGame.getCurrTurn().getAllDice()), 0);
                         showScores();
-                        //dice1Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(1);
-                        //if (PlayGame.getCurrTurn().isScored() == true){
-                        //return;
-                        //}
-                        //return;
                     }
-                    //return;
                 }
 
             }
@@ -156,17 +124,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(2, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(2, PlayGame.getCurrTurn().getAllDice()), 1);
                         showScores();
-                        //dice2Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(2);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -179,17 +140,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(3, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(3, PlayGame.getCurrTurn().getAllDice()), 2);
                         showScores();
-                        //dice3Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(3);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -202,17 +156,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(4, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(4, PlayGame.getCurrTurn().getAllDice()), 3);
                         showScores();
-                        //dice4Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(4);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -225,17 +172,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(5, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(5, PlayGame.getCurrTurn().getAllDice()), 4);
                         showScores();
-                        //dice5Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(5);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -248,17 +188,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkNumber(6, PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.checkNumber(6, PlayGame.getCurrTurn().getAllDice()), 5);
                         showScores();
-                        //dice6Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(6);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -271,17 +204,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.check3OfAKind(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.check3OfAKind(PlayGame.getCurrTurn().getAllDice()), 6);
                         showScores();
-                        //tripletsBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(7);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -294,17 +220,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.check4OfAKind(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(checkDice.check4OfAKind(PlayGame.getCurrTurn().getAllDice()), 7);
                         showScores();
-                        //allfoursBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(8);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -317,17 +236,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkFullhouse(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(25, 8);
                         showScores();
-                        //houseBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(9);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -340,17 +252,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkSmallStraight(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(30, 9);
                         showScores();
-                        //smallStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(10);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -363,19 +268,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkLargeStraight(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(40, 10);
                         showScores();
-                        //largeStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(11);
                         showScores();
-                        //if (PlayGame.getCurrTurn().isScored() == true){
-                        //    return;
-                        //}
-                        //else{
-                        //    return;
-                        //}
                     }
-                    //return;
                 }
             }
         });
@@ -387,7 +284,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 if (PlayGame.getCurrTurn().isScored() == false && PlayGame.getCurrPlayer().isScoresSet(11) == false) {
                     PlayGame.getCurrPlayer().setPoints(checkDice.checkChance(PlayGame.getCurrTurn().getAllDice()), 11);
                     showScores();
-                    //chanceBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                     PlayGame.getCurrTurn().setScored(true);
                 }
 
@@ -402,17 +298,10 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     if (checkDice.checkYatzy(PlayGame.getCurrTurn().getAllDice()) > 0) {
                         PlayGame.getCurrPlayer().setPoints(50, 12);
                         showScores();
-                        //kniffelBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                     } else {
                         setScoreNull(12);
-                        if (PlayGame.getCurrTurn().isScored() == true) {
-                            return;
-                        } else {
-                            return;
-                        }
                     }
-                    return;
                 }
             }
         });
@@ -446,9 +335,7 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         imageViews.add(chanceBtn);
         imageViews.add(kniffelBtn);
 
-
         showScores();
-
 
         iviewDice1 = (ImageView) findViewById(R.id.iviewDice1);
         iviewDice1.setOnClickListener(new OnClickListener() {
@@ -529,10 +416,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     PlayGame.getCurrTurn().rollAllDice();
                     showAllDices();
                     txtCountDiceRoll.setText(Integer.toString(PlayGame.getCurrTurn().getCountRolls()));
-                    return;
                 } else {
                     Toast.makeText(KniffelGame.this, getString(R.string.strPlsSelectScore), Toast.LENGTH_SHORT).show();
-                    return;
                 }
             }
         });
@@ -548,7 +433,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                     PlayGame.nextResult();
                     Intent intent = new Intent(KniffelGame.this, ScoreGame.class);
                     startActivity(intent);
-                    return;
                 }
                 if (PlayGame.getCountRounds() < 12 && PlayGame.getCurrTurn().isScored()) {
                     nextPlayer();
@@ -565,11 +449,8 @@ public class KniffelGame extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
         finish();
-
         int clickedElementScore = view.getId();
-
         if (clickedElementScore == R.id.btnBack) {
             Intent intent = new Intent(KniffelGame.this, MainActivity.class);
             startActivity(intent);
@@ -577,6 +458,12 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
+    /**
+     * method to cheange to the next Player,
+     * changes current Player, updates the name and the avatar,
+     * show that the player has not rolled the dice yet,
+     * shows the scores of the user as well as the dices
+     */
     public void nextPlayer() {
         PlayGame.changePlayer();
         txtPlayer.setText(PlayGame.getCurrPlayer().getName());
@@ -586,7 +473,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         showAllDices();
     }
 
-
+    /**
+     * method to show the scores of a player,
+     * puts the points into the textviews,
+     * indicates with the blackgroundcolor if a score has been set yet
+     */
     public void showScores() {
         for (int i = 0; i < textViews.size(); i++) {
             textViews.get(i).setText(Integer.toString(PlayGame.getCurrPlayer().getPoints(i)));
@@ -601,7 +492,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
-
+    /**
+     * undates inte imageview of a dice to the picture of the pipes a dice is showing
+     * @param dice
+     * @param pipes
+     */
     public static void showDice(ImageView dice, int pipes) {
         switch (pipes) {
             case 0:
@@ -629,10 +524,11 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         }
     }
 
+    /**
+     * method updates the images of alle dices
+     */
     public void showAllDices() {
         int[] allDice = PlayGame.getCurrTurn().getAllDice();
-        //testzwecke
-        Log.d("SENSO", "Würfel sind " + allDice[0] + " , " + allDice[1] + " , " + allDice[2] + " , " + allDice[3] + " , " + allDice[4]);
         KniffelGame.showDice(iviewDice1, allDice[0]);
         KniffelGame.showDice(iviewDice2, allDice[1]);
         KniffelGame.showDice(iviewDice3, allDice[2]);
@@ -640,7 +536,12 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         KniffelGame.showDice(iviewDice5, allDice[4]);
     }
 
-
+    /**
+     * method that oopens up an alter dialog where the user can choose
+     * if a score shall be 0 or not
+     * @param choice the categiry where the user wants to have 0 points, for example large street
+     * @return int 0
+     */
     public int setScoreNull(final int choice) {
         int returnValue;
         int value;
@@ -651,7 +552,6 @@ public class KniffelGame extends Activity implements View.OnClickListener {
         alertDialog.setPositiveButton(getString(R.string.strDialogReturn), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 return;
             }
         });
@@ -663,73 +563,61 @@ public class KniffelGame extends Activity implements View.OnClickListener {
                 switch (choice) {
                     case 1:
                         PlayGame.getCurrPlayer().setPoints(0, 0);
-                        //dice1Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 2:
                         PlayGame.getCurrPlayer().setPoints(0, 1);
-                        //dice2Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 3:
                         PlayGame.getCurrPlayer().setPoints(0, 2);
-                        //dice3Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 4:
                         PlayGame.getCurrPlayer().setPoints(0, 3);
-                        //dice4Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 5:
                         PlayGame.getCurrPlayer().setPoints(0, 4);
-                        //dice5Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 6:
                         PlayGame.getCurrPlayer().setPoints(0, 5);
-                        //dice6Btn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 7:
                         PlayGame.getCurrPlayer().setPoints(0, 6);
-                        //tripletsBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 8:
                         PlayGame.getCurrPlayer().setPoints(0, 7);
-                        //allfoursBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 9:
                         PlayGame.getCurrPlayer().setPoints(0, 8);
-                        //houseBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 10:
                         PlayGame.getCurrPlayer().setPoints(0, 9);
-                        //smallStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 11:
                         PlayGame.getCurrPlayer().setPoints(0, 10);
-                        //largeStreetBtn.setColorFilter(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
                     case 12:
                         PlayGame.getCurrPlayer().setPoints(0, 12);
-                        //kniffelBtn.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                         PlayGame.getCurrTurn().setScored(true);
                         showScores();
                         break;
