@@ -8,23 +8,14 @@ import java.util.Arrays;
  */
 
 public class Player {
-       private String name = "";
-       private int highscore = 0;
-       private int avatarID = 0;
-       public boolean[] scoreSet = new boolean[13];
-       public int[] scores = new int[13];
-       public int [] finalScore = new int[5];
-       public static ArrayList<Player> allPlayers = new ArrayList<Player>();
-       private static int numberOfPlayer;
+    private String name = "";
+    private int avatarID = 0;
+    public boolean[] scoreSet = new boolean[13];
+    public int[] scores = new int[13];
+    public int[] finalScore = new int[5];
+    public static ArrayList<Player> allPlayers = new ArrayList<Player>();
 
-       /*constructor*/
-       public Player (String newName) {
-            this.name = newName;
-        this.avatarID = 2131099732;
-        allPlayers.add(this);
-        numberOfPlayer++;
-       }
-
+    /*constructor*/
     public Player(String newName, int avatarID) {
         this.name = newName;
         this.avatarID = avatarID;
@@ -34,43 +25,31 @@ public class Player {
 
     /*methods*/
     public String getName() {
-            return name;
-        }
-    public static int getNumberOfPlayer() {
-        return numberOfPlayer;
+        return name;
     }
-
 
     public int getAvatarID() {
         return avatarID;
     }
 
-    public void setAvatarID(int avatarID) {
-        this.avatarID = avatarID;
-    }
-
     /*methos getPoints
                * return int -> the points at the arraypostition
                * param: Player and arrayIndex -> the position where the value is saved*/
-       public int getPoints(int arrayIndex){
+    public int getPoints(int arrayIndex) {
         return this.scores[arrayIndex];
     }
 
-    public void setPoints(int points, int arrayIndex){
+    public void setPoints(int points, int arrayIndex) {
         this.scores[arrayIndex] = points;
         this.scoreSet[arrayIndex] = true;
-       }
+    }
 
     public boolean isScoresSet(int arrayIndex) {
         return this.scoreSet[arrayIndex];
     }
 
     /*methods finalScore*/
-
-    public int getFinalScore(int arrayIndex){
+    public int getFinalScore(int arrayIndex) {
         return this.finalScore[arrayIndex];
     }
-
-    public void setFinalScore(int finalPoints, int arrayIndex){
-        this.finalScore[arrayIndex] = finalPoints;      }
 }
