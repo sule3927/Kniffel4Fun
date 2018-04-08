@@ -17,26 +17,22 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ArrayList<AvatarItem> mAvatarList;
     private AvatarAdapter mAdapter;
-
     private Button startBtn;
     private Button btnNewPlayer;
     private EditText editName;
     private Button btnInfo;
     private Button btnRules;
     private int selectedID;
-
     private Animation animationJiggle;
     private Handler handler = new Handler();
-
 
     @Override
     protected void onResume() {
         super.onResume();
-        handler.postDelayed(new JiggleButton(),1000*10);
+        handler.postDelayed(new JiggleButton(), 1000 * 10);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         animationJiggle = AnimationUtils.loadAnimation(this, R.anim.jigglestartbtn);
 
-        class JiggleButton implements Runnable{
-
+        class JiggleButton implements Runnable {
             @Override
             public void run() {
                 startBtn.startAnimation(animationJiggle);
@@ -54,12 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         editName = (EditText) findViewById(R.id.editName);
-
         startBtn = (Button) findViewById(R.id.btnStart);
         startBtn.setOnClickListener(this);
 
         initList();
-
         final Spinner spinnerAvatar = findViewById(R.id.spiAvatar);
 
         mAdapter = new AvatarAdapter(this, mAvatarList);
@@ -83,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 Player player = new Player(editName.getText().toString(), getSelectedID());
-                Toast.makeText(MainActivity.this, editName.getText().toString()+" "+ getString(R.string.strPlayerCreated), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, editName.getText().toString() + " " + getString(R.string.strPlayerCreated), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -105,6 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * method to initialise the Liste with the Images of avatars
+     */
     private void initList() {
         mAvatarList = new ArrayList<>();
         mAvatarList.add(new AvatarItem(R.drawable.astronaut));
@@ -121,8 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (Player.allPlayers.isEmpty() == true) {
                 Toast.makeText(MainActivity.this, getString(R.string.strPlsEnterName), Toast.LENGTH_SHORT).show();
                 return;
-            }
-            else{
+            } else {
                 Intent intent = new Intent(MainActivity.this, KniffelGame.class);
                 startActivity(intent);
             }
@@ -130,28 +125,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-/*Methode zur Animation des Start-Buttons*/
-
-   private class JiggleButton implements Runnable {
-        @Override
-        public void run() {
-            startBtn.startAnimation(animationJiggle);
-        }
-    }
-
-    /*test lege zwei Spieler an - dieses geschieht nachher über die Oberfläche*/
-//    PlayGame game = new PlayGame();
-//    int i = game.testPlayer();
-
+    /**
+     * method to get the selected id of the avatar Image
+     * @return int, the id of the image
+     */
     public int getSelectedID() {
         return selectedID;
     }
 
+    /**
+     * method to set the selected id, used when creating a new player
+     * @param selectedID of the avatar Image
+     */
     public void setSelectedID(int selectedID) {
         this.selectedID = selectedID;
     }
 
-    public void infoTxt(){
+    /**
+     * method to open up an dialog that shows the information text to the user
+     */
+    public void infoTxt() {
         android.support.v7.app.AlertDialog.Builder alertDialogInfo = new android.support.v7.app.AlertDialog.Builder(this);
         alertDialogInfo.setTitle("Info");
         alertDialogInfo.setMessage("INFORMATION ABOUT USED GRAPHICS\n" +
@@ -184,7 +177,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         alertDialogInfo.show();
     }
 
-    public void rulesTxt(){
+    /**
+     * method that opens up a dialog box that shows to rules to the user
+     */
+    public void rulesTxt() {
         android.support.v7.app.AlertDialog.Builder alertDialogInfo = new android.support.v7.app.AlertDialog.Builder(this);
         alertDialogInfo.setTitle("Rules");
         alertDialogInfo.setMessage("In Yatzy the objective is to obtain the highest score by throwing 5 dice.\n" +
@@ -215,6 +211,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //show alert dialog
         alertDialogInfo.show();
+    }
+
+    /**
+     * method to animate the startbutton to jiggle
+     */
+    private class JiggleButton implements Runnable {
+        @Override
+        public void run() {
+            startBtn.startAnimation(animationJiggle);
+        }
     }
 }
 
