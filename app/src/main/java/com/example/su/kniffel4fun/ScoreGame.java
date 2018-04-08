@@ -46,7 +46,7 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         setResults();
 
         backBtn = (ImageButton) findViewById(R.id.ibtnFinish);
-        backBtn.setOnClickListener(new View.OnClickListener(){
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ScoreGame.this, MainActivity.class);
@@ -57,7 +57,7 @@ public class ScoreGame extends Activity implements View.OnClickListener {
         quitBtn = (Button) findViewById(R.id.btnEndGame);
         quitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v){
+            public void onClick(View v) {
                 finish();
                 System.exit(0);
             }
@@ -68,12 +68,12 @@ public class ScoreGame extends Activity implements View.OnClickListener {
     /**
      * method to show the final scores of all Players to the user
      */
-    public void setResults(){
+    public void setResults() {
         int thisPlayer = 0;
-        while ( thisPlayer <Player.allPlayers.size()) {
+        while (thisPlayer < Player.allPlayers.size()) {
             Player nextPlayer = Player.allPlayers.get(thisPlayer);
             PlayGame.setCurrPlayer(nextPlayer);
-            switch (thisPlayer){
+            switch (thisPlayer) {
                 case 0:
                     iviewPlayer1 = (ImageView) findViewById(R.id.iviewPlayer1);
                     iviewPlayer1.setImageResource(PlayGame.getCurrPlayer().getAvatarID());

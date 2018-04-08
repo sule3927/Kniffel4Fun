@@ -22,6 +22,7 @@ public class turn {
         this.countRolls = 0;
         this.setAllDice();
     }
+
     /*
     * method to return dice1
     * @return dice1
@@ -79,7 +80,7 @@ public class turn {
         int pipesDice3 = dice3.getPipes();
         int pipesDice4 = dice4.getPipes();
         int pipesDice5 = dice5.getPipes();
-        int[] allDice = {pipesDice1,pipesDice2,pipesDice3,pipesDice4,pipesDice5};
+        int[] allDice = {pipesDice1, pipesDice2, pipesDice3, pipesDice4, pipesDice5};
         this.allDice = allDice;
     }
 
@@ -121,8 +122,8 @@ public class turn {
     * method also increments countRolls (the times the dice have been rolled)
     * and fills the array allDice with the current pipes that are shown
      */
-    public void rollAllDice(){
-        if (this.getCountRolls() <=2) {
+    public void rollAllDice() {
+        if (this.getCountRolls() <= 2) {
             dice1.rollThisDice();
             dice2.rollThisDice();
             dice3.rollThisDice();

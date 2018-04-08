@@ -28,6 +28,7 @@ public class PlayGame {
 
     /**
      * method to get how many rounds have been player
+     *
      * @return int, the number of played rounds
      */
     public static int getCountRounds() {
@@ -36,6 +37,7 @@ public class PlayGame {
 
     /**
      * method to return the currently Player-Object
+     *
      * @return Player who is playing
      */
     public static Player getCurrPlayer() {
@@ -44,6 +46,7 @@ public class PlayGame {
 
     /**
      * method to declare which is the current player
+     *
      * @param currPlayer Player whos turn it shall be
      */
     public static void setCurrPlayer(Player currPlayer) {
@@ -52,6 +55,7 @@ public class PlayGame {
 
     /**
      * method to get the current player
+     *
      * @return Player whos turn it is
      */
     public static turn getCurrTurn() {
@@ -60,6 +64,7 @@ public class PlayGame {
 
     /**
      * method to set the current turn
+     *
      * @param currTurn
      */
     public static void setCurrTurn(turn currTurn) {
@@ -88,20 +93,20 @@ public class PlayGame {
     /**
      * this method interates over allPlayers and calculates the results
      */
-    public static void nextResult(){
-       int thisPlayer = 0;
-       while ( thisPlayer <Player.allPlayers.size()) {
-           Player nextPlayer = Player.allPlayers.get(thisPlayer);
-           PlayGame.setCurrPlayer(nextPlayer);
-           calculateResult();
-           thisPlayer++;
+    public static void nextResult() {
+        int thisPlayer = 0;
+        while (thisPlayer < Player.allPlayers.size()) {
+            Player nextPlayer = Player.allPlayers.get(thisPlayer);
+            PlayGame.setCurrPlayer(nextPlayer);
+            calculateResult();
+            thisPlayer++;
         }
     }
 
     /**
      * this method calculates the end-result for the current Player
      */
-    public static void calculateResult(){
+    public static void calculateResult() {
         int[] scores = currPlayer.scores;
         int sumTop = scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5];
         currPlayer.finalScore[0] = sumTop;

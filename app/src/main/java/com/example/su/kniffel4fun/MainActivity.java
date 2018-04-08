@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     /**
      * method to get the selected id of the avatar Image
+     *
      * @return int, the id of the image
      */
     public int getSelectedID() {
@@ -135,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     /**
      * method to set the selected id, used when creating a new player
+     *
      * @param selectedID of the avatar Image
      */
     public void setSelectedID(int selectedID) {

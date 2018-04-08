@@ -5,9 +5,9 @@ import java.util.Random;
 /**
  * @author Merle Friedrichsen on 28.02.2018.
  * @version 1
- * class describes the object Dice and its methods
- * a Dice shows a number between 1-6 called pipes
- * a Dice may be rollable or not
+ *          class describes the object Dice and its methods
+ *          a Dice shows a number between 1-6 called pipes
+ *          a Dice may be rollable or not
  */
 public class dice {
     private int pipes;
@@ -34,7 +34,8 @@ public class dice {
     }
 
     /**
-     *method to set the pipes that are shown (the number that has been rolled)
+     * method to set the pipes that are shown (the number that has been rolled)
+     *
      * @param pipes
      */
     public void setPipes(int pipes) {
@@ -64,7 +65,7 @@ public class dice {
     * and sets the pipes of the dice
     */
     public void rollThisDice() {
-        if (this.isRollable() == true){
+        if (this.isRollable() == true) {
             randomGenerator = new Random();
             setPipes(randomGenerator.nextInt(6) + 1);
         }

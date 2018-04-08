@@ -10,7 +10,7 @@ public class AvatarItem {
     /*
     * constructor to create a new AvatarItem
      */
-    public AvatarItem(int avatarImage){
+    public AvatarItem(int avatarImage) {
         mAvatarImage = avatarImage;
     }
 
