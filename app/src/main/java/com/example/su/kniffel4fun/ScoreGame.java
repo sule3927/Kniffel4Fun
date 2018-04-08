@@ -11,11 +11,9 @@ import android.widget.TextView;
 
 
 /**
- * Created by Su on 25.03.2018.
+ * @author Susann Leonhardt on 25.03.2018.
  */
-
 public class ScoreGame extends Activity implements View.OnClickListener {
-
     private TextView txtPlayer1UpperSection;
     private TextView txtPlayer1LowerSection;
     private TextView txtPlayer1Yatzy;
@@ -67,7 +65,9 @@ public class ScoreGame extends Activity implements View.OnClickListener {
 
     }
 
-
+    /**
+     * method to show the final scores of all Players to the user
+     */
     public void setResults(){
         int thisPlayer = 0;
         while ( thisPlayer <Player.allPlayers.size()) {
